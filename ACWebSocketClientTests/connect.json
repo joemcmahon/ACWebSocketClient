@@ -1,0 +1,455 @@
+{
+  "connect": {
+    "client": "bd42907a-7a15-438f-8827-f2a063e48c20",
+    "version": "0.0.0",
+    "subs": {
+      "station:radiospiral": {
+        "recoverable": true,
+        "epoch": "1732311254",
+        "publications": [
+          {
+            "data": {
+              "np": {
+                "station": {
+                  "id": 1,
+                  "name": "RadioSpiral",
+                  "shortcode": "radiospiral",
+                  "description": "Captivating electronica 24/7. See radiospiral.net/calendar for live DJ schedule.",
+                  "frontend": "icecast",
+                  "backend": "liquidsoap",
+                  "timezone": "America/Los_Angeles",
+                  "listen_url": "https://radio2.radiospiral.net:8000/stream.mp3",
+                  "url": "https://radiospiral.net",
+                  "public_player_url": "https://radio2.radiospiral.net/public/radiospiral",
+                  "playlist_pls_url": "https://radio2.radiospiral.net/public/radiospiral/playlist.pls",
+                  "playlist_m3u_url": "https://radio2.radiospiral.net/public/radiospiral/playlist.m3u",
+                  "is_public": true,
+                  "mounts": [
+                    {
+                      "id": 1,
+                      "name": "/stream.mp3 (128kbps MP3)",
+                      "url": "https://radio2.radiospiral.net:8000/stream.mp3",
+                      "bitrate": 128,
+                      "format": "mp3",
+                      "listeners": {
+                        "total": 1,
+                        "unique": 1,
+                        "current": 1
+                      },
+                      "path": "/stream.mp3",
+                      "is_default": true
+                    }
+                  ],
+                  "remotes": [],
+                  "hls_enabled": false,
+                  "hls_is_default": false,
+                  "hls_url": null,
+                  "hls_listeners": 0
+                },
+                "listeners": {
+                  "total": 1,
+                  "unique": 1,
+                  "current": 1
+                },
+                "live": {
+                  "is_live": false,
+                  "streamer_name": "",
+                  "broadcast_start": null,
+                  "art": null
+                },
+                "now_playing": {
+                  "sh_id": 57799,
+                  "played_at": 1734713887,
+                  "duration": 677,
+                  "playlist": "Spud",
+                  "streamer": "",
+                  "is_request": false,
+                  "song": {
+                    "id": "268b2c866ccddf45e73c38e1573753d4",
+                    "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/5c1b327b6cee65132add5426-1718536022.jpg",
+                    "custom_fields": {
+                      "intensity": null
+                    },
+                    "text": "Kontroll-Raum - Raum 23",
+                    "artist": "Kontroll-Raum",
+                    "title": "Raum 23",
+                    "album": "Check In",
+                    "genre": "",
+                    "isrc": "",
+                    "lyrics": ""
+                  },
+                  "elapsed": 361,
+                  "remaining": 316
+                },
+                "playing_next": {
+                  "cued_at": 1734713642,
+                  "played_at": 1734714556,
+                  "duration": 601,
+                  "playlist": "Spud",
+                  "is_request": false,
+                  "song": {
+                    "id": "0c00b394b1a568290099ac4f77605373",
+                    "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/e89e878843a3bdd90500179f-1718533094.jpg",
+                    "custom_fields": {
+                      "intensity": null
+                    },
+                    "text": "Christian Fiesel - At the Great Rift Valley III",
+                    "artist": "Christian Fiesel",
+                    "title": "At the Great Rift Valley III",
+                    "album": "FOURTH WORLD IS - Jon Hassell Tribute",
+                    "genre": "",
+                    "isrc": "",
+                    "lyrics": ""
+                  }
+                },
+                "song_history": [
+                  {
+                    "sh_id": 57798,
+                    "played_at": 1734713647,
+                    "duration": 240,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "eda53f57e9977526917a342d20bfdd76",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/e2d7c1ad061147f7b095dd76-1718539482.jpg",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "Scott Lawlor - The 7th Word - Pater in manus tuas commendo spiritum meum",
+                      "artist": "Scott Lawlor",
+                      "title": "The 7th Word - Pater in manus tuas commendo spiritum meum",
+                      "album": "Seven Last Words (waag_rel066)",
+                      "genre": "",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57796,
+                    "played_at": 1734713162,
+                    "duration": 488,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "ff71462957b13614e3280f2031c67557",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/c95facb1a4c627caab96016f",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "Gregg Plummer - Evolution Omega",
+                      "artist": "Gregg Plummer",
+                      "title": "Evolution Omega",
+                      "album": "Transambiation",
+                      "genre": "Ambient",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57795,
+                    "played_at": 1734712896,
+                    "duration": 268,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "cfc879302a68ff78a2788ff2dc0f1d18",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/99f81d032f92fb77dcc28bbd",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "Conni St. Pierre - Heart Of The Rose",
+                      "artist": "Conni St. Pierre",
+                      "title": "Heart Of The Rose",
+                      "album": "Flower Spirits",
+                      "genre": "New Age",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57793,
+                    "played_at": 1734712026,
+                    "duration": 870,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "8f947be40171a7730da19816421c0d6d",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/ad1c0ffb07e79342f643aae4",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "Thom Brennan - Cedars Stand Against the Rain",
+                      "artist": "Thom Brennan",
+                      "title": "Cedars Stand Against the Rain",
+                      "album": "Mist",
+                      "genre": "Ambient",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57792,
+                    "played_at": 1734711508,
+                    "duration": 520,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "3291cb79e470703e3db7f317cf270acd",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/cc64c4ac2173935c99bd1345-1731473667.jpg",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "Tony Gerber - Space Of Eternal Peace",
+                      "artist": "Tony Gerber",
+                      "title": "Space Of Eternal Peace",
+                      "album": "Sound Medicine For Now",
+                      "genre": "",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57791,
+                    "played_at": 1734711397,
+                    "duration": 114,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "36c48ac1c5f77271019de26ad460d19b",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/951dff86a0fdf66df948600b",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "Ozone Player - Ollismix",
+                      "artist": "Ozone Player",
+                      "title": "Ollismix",
+                      "album": "Videozone",
+                      "genre": "Electronic",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57789,
+                    "played_at": 1734711065,
+                    "duration": 331,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "35205f0b6ba2d7d58df2a51c8e24ff66",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/9ebd12c952e1d32a36c68bc3",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "Mike Andrews - Nexus-6",
+                      "artist": "Mike Andrews",
+                      "title": "Nexus-6",
+                      "album": "2019",
+                      "genre": "Downtempo Electronica",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57788,
+                    "played_at": 1734710820,
+                    "duration": 247,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "386f7bdc81f828c8dce9c2be40f7d7f0",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/81a6de0878244180ce76cf3e-1718541389.jpg",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "ontol - Lakeside (Variation III/2.7b)",
+                      "artist": "ontol",
+                      "title": "Lakeside (Variation III/2.7b)",
+                      "album": "The Wood Duck Variations",
+                      "genre": "",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57787,
+                    "played_at": 1734709992,
+                    "duration": 831,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "c1b1933ca65a870e9056088c2f3baf19",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/c5a2f556430dfa476afea9a0",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "Syndromeda - Edge to Edge",
+                      "artist": "Syndromeda",
+                      "title": "Edge to Edge",
+                      "album": "Metaphysical Experiences",
+                      "genre": "New Age / Electronic / Berlin-School",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57785,
+                    "played_at": 1734708603,
+                    "duration": 1392,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "32f1779b3d4daab5b86d455121cde4c9",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/32d7feb39f36fd7d3dce843f-1718541387.jpg",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "usr sbin - Track 01",
+                      "artist": "usr sbin",
+                      "title": "Track 01",
+                      "album": "An Ambient Guitar, Volume I ~ Rough Cuts",
+                      "genre": "Ambient",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57784,
+                    "played_at": 1734708465,
+                    "duration": 140,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "6365ad6720f2e715aca851bb5e018694",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/e91b3ccf8135250bc4f3cacf",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "Robert Dorschel - foundation",
+                      "artist": "Robert Dorschel",
+                      "title": "foundation",
+                      "album": "Sketchy",
+                      "genre": "",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57782,
+                    "played_at": 1734707940,
+                    "duration": 528,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "a1c44aa31badac03d4c580e4a4abd5c3",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/cb110192e0821f9312c0493a-1718534126.jpg",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "Erik Wøllo - Cloud Circles",
+                      "artist": "Erik Wøllo",
+                      "title": "Cloud Circles",
+                      "album": "Recurrence",
+                      "genre": "",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57781,
+                    "played_at": 1734707598,
+                    "duration": 342,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "dcbf48f4950d78ff5c0b0fe793dd794e",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/aa5332082f8bce8acdb8ef8b-1718539056.jpg",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "Second Harmonic Generation - Drones",
+                      "artist": "Second Harmonic Generation",
+                      "title": "Drones",
+                      "album": "Collected Single Tracks",
+                      "genre": "",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57779,
+                    "played_at": 1734707117,
+                    "duration": 483,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "1665f2239b4970b15af7bbeed26d93cf",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/364172c06ba886d850cbf6c1",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "Natural Life Essence - Spiders trip (Ice desert Part 1)",
+                      "artist": "Natural Life Essence",
+                      "title": "Spiders trip (Ice desert Part 1)",
+                      "album": "Wave Bio Collector",
+                      "genre": "",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  },
+                  {
+                    "sh_id": 57777,
+                    "played_at": 1734706806,
+                    "duration": 313,
+                    "playlist": "Spud",
+                    "streamer": "",
+                    "is_request": false,
+                    "song": {
+                      "id": "0881f42e135c5b0e2d4725150803d111",
+                      "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/1e074b160efa9d9d9654a5a8-1718536631.jpg",
+                      "custom_fields": {
+                        "intensity": null
+                      },
+                      "text": "Lucette Bourdin - Sundrops ~ Interlude",
+                      "artist": "Lucette Bourdin",
+                      "title": "Sundrops ~ Interlude",
+                      "album": "Soaring Above The Thunder",
+                      "genre": "Ambient",
+                      "isrc": "",
+                      "lyrics": ""
+                    }
+                  }
+                ],
+                "is_online": true,
+                "cache": "event"
+              },
+              "triggers": [],
+              "current_time": 1734714244
+            },
+            "offset": 185403
+          }
+        ],
+        "recovered": true,
+        "positioned": true,
+        "was_recovering": true
+      }
+    },
+    "ping": 25,
+    "session": "642f77f7-b443-4105-8fd5-fa1dcbbabc7c",
+    "time": 1734714247565
+  }
+}

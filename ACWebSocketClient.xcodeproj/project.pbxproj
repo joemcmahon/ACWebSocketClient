@@ -33,6 +33,15 @@
 			);
 			target = 71FB6DC72D1DD37C0076DD97 /* ACWebSocketClient */;
 		};
+		71FB6DEC2D1DD5700076DD97 /* Exceptions for "ACWebSocketClient" folder in "ACWebSocketClientTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AzuracastWebSocketClient.swift,
+				ParseWebSocketData.swift,
+				StreamStatus.swift,
+			);
+			target = 71FB6DD12D1DD37C0076DD97 /* ACWebSocketClientTests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,6 +49,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				71FB6DDA2D1DD37C0076DD97 /* Exceptions for "ACWebSocketClient" folder in "ACWebSocketClient" target */,
+				71FB6DEC2D1DD5700076DD97 /* Exceptions for "ACWebSocketClient" folder in "ACWebSocketClientTests" target */,
 			);
 			path = ACWebSocketClient;
 			sourceTree = "<group>";
@@ -244,7 +254,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
@@ -286,7 +296,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
