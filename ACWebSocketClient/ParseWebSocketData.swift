@@ -10,9 +10,11 @@ import Combine
 
 class ParseWebSocketData {
     var data: Data
+    var defaultDJ: String?
     
-    init(data: Data, status: StreamStatus? = nil) {
+    init(data: Data, status: StreamStatus? = nil, defaultDJ: String?) {
         self.data = data
+        self.defaultDJ = defaultDJ
     }
     
     @Published var status: StreamStatus = StreamStatus()
@@ -28,7 +30,11 @@ class ParseWebSocketData {
         let json = try JSONSerialization.jsonObject(with: data, options: [])
         if let nowPlayingData = json as? [String: Any] {
             self.status = StreamStatus()
+            
+            // 'connect' message
             if nowPlayingData["connect"] != nil {
+                
+                // chain down to the now-playing data
                 let connect = nowPlayingData["connect"] as? Dictionary<String, Any>
                 let subs = connect?["subs"] as? Dictionary<String, Any>
                 let sub = subs?["station:\(shortCode)"] as? Dictionary<String, Any>
@@ -38,12 +44,11 @@ class ParseWebSocketData {
                 let np = data?["np"] as? Dictionary<String, Any>
 
                 let live = np?["live"] as? Dictionary<String, Any>
-                status.dj = live?["streamer_name"] as? String ?? ""
-                if status.dj == "" {
-                    status.dj = "Spud the Ambient Robot"
-                }
-                status.isLiveDJ = status.dj !=  "Spud the Ambient Robot"
+                self.status = setDJ(live: live, status: self.status, defaultDJ: defaultDJ)
+
                 /*
+                 Next song data is available, but StreamStatus doesn't support it yet
+
                  let next = np?["playing_next"] as? Dictionary<String, Any>
                  let next_song = next?["song"] as? Dictionary<String, Any>
                  let next_album = next_song?["album"] as! String
@@ -51,25 +56,29 @@ class ParseWebSocketData {
                  let next_artist = next_song?["artist"] as! String
                  let next_title = next_song?["title"] as! String
                  */
+                
+                // Chain down to current song
                 let current = np?["now_playing"] as? Dictionary<String, Any>
                 let current_song = current?["song"] as? Dictionary<String, Any>
+                
+                // Extract track info
                 status.album = current_song?["album"] as! String
                 status.artist = current_song?["artist"] as! String
                 status.track = current_song?["title"] as! String
                 let artURLString = current_song?["art"] as! String
                 status.artwork = URL(string: artURLString)
+
+                // We parsed the data, so this struct has changed
                 status.changed = true
             } else if nowPlayingData["channel"] != nil {
+                
+                // channel data. chain down to now-playing data.
                 let pub = nowPlayingData["pub"] as! Dictionary<String, Any>
                 let npData = pub["data"] as! Dictionary<String, Any>
                 let np = npData["np"] as! Dictionary<String, Any>
+
                 let live = np["live"] as? Dictionary<String, Any>
-                let isLive = live?["is_live"] as! Int
-                status.isLiveDJ = (isLive == 1)
-                status.dj = live?["streamer_name"] as! String
-                if status.dj == "" {
-                    status.dj = "Spud the Ambient Robot"
-                }
+                self.status = setDJ(live: live, status: self.status, defaultDJ: defaultDJ)
     
                 let nowPlaying = np["now_playing"] as! Dictionary<String, Any>
                 let song = nowPlaying["song"] as! Dictionary<String, Any>
@@ -86,4 +95,17 @@ class ParseWebSocketData {
         }
         return status
     }
+    
+    func setDJ(live: Dictionary<String, Any>?, status: StreamStatus, defaultDJ: String?) -> StreamStatus {
+        // live data: extract dj, set default if no dj and a default was supplied
+        status.dj = live?["streamer_name"] as? String ?? ""
+        status.isLiveDJ = true
+        if status.dj == "" {
+            status.isLiveDJ = false
+            guard let dj = defaultDJ else { return status }
+                status.dj = dj
+        }
+        return status
+    }
+
 }

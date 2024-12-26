@@ -31,7 +31,7 @@ final class RadioSpiral3Tests {
         }
         assert(!contents.isEmpty, "Loaded data should not be empty.")
         let data = Data(contents.utf8)
-        let parser = ParseWebSocketData(data: data)
+        let parser = ParseWebSocketData(data: data, defaultDJ: "Spud")
         let result: StreamStatus
         let artURL = URL(string: "https://radio2.radiospiral.net/api/station/radiospiral/art/5c1b327b6cee65132add5426-1718536022.jpg")
         do {
@@ -40,9 +40,9 @@ final class RadioSpiral3Tests {
         } catch {
             throw FileLoadError.unexpectedContents
         }
-        assert(result.artwork != nil, "artwork should match")
+        assert(result.artwork == artURL, "artwork should match")
         assert(!result.isLiveDJ, "no live DJ")
-        assert(result.dj == "Spud the Ambient Robot", "Spud set when no DJ")
+        assert(result.dj == "Spud", "Spud set when no DJ")
         assert(result.track == "Raum 23", "right title")
         assert(result.artist == "Kontroll-Raum", "right artist")
         assert(result.album == "Check In", "right album")
@@ -62,7 +62,7 @@ final class RadioSpiral3Tests {
         }
         assert(!contents.isEmpty, "Loaded data should not be empty.")
         let data = Data(contents.utf8)
-        let parser = ParseWebSocketData(data: data)
+        let parser = ParseWebSocketData(data: data, defaultDJ: "Spud")
         let result: StreamStatus
         let artURL = URL(string: "https://radio2.radiospiral.net/api/station/radiospiral/streamer/8/art-1731719725.jpg")
         do {
@@ -93,7 +93,7 @@ final class RadioSpiral3Tests {
         }
         assert(!contents.isEmpty, "Loaded data should not be empty.")
         let data = Data(contents.utf8)
-        let parser = ParseWebSocketData(data: data)
+        let parser = ParseWebSocketData(data: data, defaultDJ:"Spud the Ambient Robot")
         let result: StreamStatus
         let artURL = URL(string: "https://radio2.radiospiral.net/api/station/radiospiral/art/56bed7b84813058e12277412-1718534289.jpg")
         do {
@@ -102,7 +102,6 @@ final class RadioSpiral3Tests {
             throw FileLoadError.unexpectedContents
         }
         assert(result.changed, "update should be true")
-        assert(result.artwork != nil, "artwork should match")
         assert(!result.isLiveDJ, "no live DJ")
         assert(result.dj == "Spud the Ambient Robot", "Spud set when no DJ")
         assert(result.track == "Phases of the Spheres, Part 1", "right title")
@@ -125,7 +124,7 @@ final class RadioSpiral3Tests {
         }
         assert(!contents.isEmpty, "Loaded data should not be empty.")
         let data = Data(contents.utf8)
-        let parser = ParseWebSocketData(data: data)
+        let parser = ParseWebSocketData(data: data, defaultDJ: "Spud")
         let result: StreamStatus
         do {
             result = try parser.parse(shortCode: "radiospiral")
@@ -133,5 +132,12 @@ final class RadioSpiral3Tests {
             throw FileLoadError.unexpectedContents
         }
         assert(!result.changed, "ping changes nothing")
+        assert(!result.isLiveDJ, "no live DJ")
+        assert(result.dj == "", "right DJ name")
+        assert(result.track == "", "right title")
+        assert(result.artist == "", "right artist")
+        assert(result.album == "", "right album")
+        assert(result.artwork == nil, "Art URL should be empty")
+
     }
 }

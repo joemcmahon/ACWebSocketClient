@@ -139,7 +139,7 @@ public class AzuracastWebSocketClient: ObservableObject {
         
         do {
             print("parsing metadata")
-            let parser = ParseWebSocketData(data: data)
+            let parser = ParseWebSocketData(data: data, defaultDJ: "Spud")
             // I can hard-unwrap this because I had to have a value to connect at all.
             let result = try parser.parse(shortCode: shortCode!)
             DispatchQueue.main.async {
