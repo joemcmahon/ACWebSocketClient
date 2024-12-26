@@ -26,37 +26,42 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		71FB6DDA2D1DD37C0076DD97 /* Exceptions for "ACWebSocketClient" folder in "ACWebSocketClient" target */ = {
+		717AFC792D1F8CCD00B06650 /* Exceptions for "Sources" folder in "ACWebSocketClient" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			publicHeaders = (
-				ACWebSocketClient.h,
+				ACWebSocketClient/ACWebSocketClient.h,
 			);
 			target = 71FB6DC72D1DD37C0076DD97 /* ACWebSocketClient */;
 		};
-		71FB6DEC2D1DD5700076DD97 /* Exceptions for "ACWebSocketClient" folder in "ACWebSocketClientTests" target */ = {
+		71AC59972D1DF03B0069BB1F /* Exceptions for "Sources" folder in "ACWebSocketClientTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				AzuracastWebSocketClient.swift,
-				ParseWebSocketData.swift,
-				StreamStatus.swift,
+				ACWebSocketClient/ACWebSocketClient.swift,
+				ACWebSocketClient/ParseWebSocketData.swift,
+				ACWebSocketClient/StreamStatus.swift,
 			);
 			target = 71FB6DD12D1DD37C0076DD97 /* ACWebSocketClientTests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		71FB6DCA2D1DD37C0076DD97 /* ACWebSocketClient */ = {
+		71AC59902D1DF03B0069BB1F /* Sources */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				71FB6DDA2D1DD37C0076DD97 /* Exceptions for "ACWebSocketClient" folder in "ACWebSocketClient" target */,
-				71FB6DEC2D1DD5700076DD97 /* Exceptions for "ACWebSocketClient" folder in "ACWebSocketClientTests" target */,
+				717AFC792D1F8CCD00B06650 /* Exceptions for "Sources" folder in "ACWebSocketClient" target */,
+				71AC59972D1DF03B0069BB1F /* Exceptions for "Sources" folder in "ACWebSocketClientTests" target */,
 			);
-			path = ACWebSocketClient;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		71FB6DD62D1DD37C0076DD97 /* ACWebSocketClientTests */ = {
+		71AC599E2D1DF0610069BB1F /* Tests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ACWebSocketClientTests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		71FB6DCA2D1DD37C0076DD97 /* ACWebSocketClient */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ACWebSocketClient;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -83,8 +88,9 @@
 		71FB6DBE2D1DD37C0076DD97 = {
 			isa = PBXGroup;
 			children = (
+				71AC59902D1DF03B0069BB1F /* Sources */,
+				71AC599E2D1DF0610069BB1F /* Tests */,
 				71FB6DCA2D1DD37C0076DD97 /* ACWebSocketClient */,
-				71FB6DD62D1DD37C0076DD97 /* ACWebSocketClientTests */,
 				71FB6DC92D1DD37C0076DD97 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				71AC59902D1DF03B0069BB1F /* Sources */,
 				71FB6DCA2D1DD37C0076DD97 /* ACWebSocketClient */,
 			);
 			name = ACWebSocketClient;
@@ -148,7 +155,7 @@
 				71FB6DD52D1DD37C0076DD97 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				71FB6DD62D1DD37C0076DD97 /* ACWebSocketClientTests */,
+				71AC599E2D1DF0610069BB1F /* Tests */,
 			);
 			name = ACWebSocketClientTests;
 			packageProductDependencies = (

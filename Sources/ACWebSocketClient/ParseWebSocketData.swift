@@ -8,18 +8,18 @@
 import Foundation
 import Combine
 
-class ParseWebSocketData {
+public class ParseWebSocketData {
     var data: Data
     var defaultDJ: String?
     
-    init(data: Data, status: StreamStatus? = nil, defaultDJ: String?) {
+    public init(data: Data, status: StreamStatus? = nil, defaultDJ: String?) {
         self.data = data
         self.defaultDJ = defaultDJ
     }
     
     @Published var status: StreamStatus = StreamStatus()
     
-    func parse(shortCode: String) throws -> StreamStatus {
+    public func parse(shortCode: String) throws -> StreamStatus {
         // First: I know, I know. Codable is the better way to do this.
         // The problem is that there is one weird key that doesn't match
         // standard JSON keying ("station:shortname") which means we can't

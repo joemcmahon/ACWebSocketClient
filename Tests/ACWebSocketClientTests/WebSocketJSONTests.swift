@@ -7,6 +7,7 @@
 
 import Testing
 import Foundation
+import ACWebSocketClient
 
 enum FileLoadError: Error {
     case fileNotFound

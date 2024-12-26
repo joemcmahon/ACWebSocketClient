@@ -38,12 +38,12 @@ public class StreamStatus: Equatable {
         self.artwork = artwork
     }
     
-    var isConnected: Bool
-    var changed: Bool
-    var isLiveDJ: Bool
-    var track: String
-    var artist: String
-    var album: String
-    var dj: String
-    var artwork: URL?
+    public var isConnected: Bool
+    public var changed: Bool
+    public var isLiveDJ: Bool
+    public var track: String
+    public var artist: String
+    public var album: String
+    public var dj: String
+    public var artwork: URL?
 }
