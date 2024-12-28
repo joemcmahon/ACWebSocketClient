@@ -5,6 +5,8 @@ let package = Package(
     name: "ACWebSocketClient",
     platforms: [
            .macOS(.v10_15) // Change this from 10.13 to 10.15
+           .iOS(.v13_5)
+           .tvOS(12.0)
     ],
     products: [
         .library(
