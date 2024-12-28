@@ -26,9 +26,22 @@ public class AzuracastWebSocketClient: ObservableObject {
     
     var serverName: String?
     var shortCode: String?
+    var defaultDJ: String?
     
     private var lastResult: StreamStatus?
-    
+        
+    public init (serverName: String?, shortCode: String?, defaultDJ: String? = "") {
+        if let defaultDJ {
+            self.defaultDJ = defaultDJ
+        }
+        if let serverName {
+            self.serverName = serverName
+        }
+        if let shortCode {
+            self.shortCode = shortCode
+        }
+    }
+
     /// Add a subscriber for metadata updates
     func addSubscriber(callback: @escaping MetadataCallback<StreamStatus>) {
             subscribers.append(callback)
@@ -139,7 +152,7 @@ public class AzuracastWebSocketClient: ObservableObject {
         
         do {
             print("parsing metadata")
-            let parser = ParseWebSocketData(data: data, defaultDJ: "Spud")
+            let parser = ParseWebSocketData(data: data, defaultDJ: defaultDJ)
             // I can hard-unwrap this because I had to have a value to connect at all.
             let result = try parser.parse(shortCode: shortCode!)
             DispatchQueue.main.async {

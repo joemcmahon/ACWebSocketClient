@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		718F42622D1F928200C7CE0B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 718F42612D1F928200C7CE0B /* README.md */; };
 		71FB6DD32D1DD37C0076DD97 /* ACWebSocketClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FB6DC82D1DD37C0076DD97 /* ACWebSocketClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		718F42612D1F928200C7CE0B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		71AC59EE2D1E193F0069BB1F /* TestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FB6DC82D1DD37C0076DD97 /* ACWebSocketClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACWebSocketClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FB6DD22D1DD37C0076DD97 /* ACWebSocketClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACWebSocketClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,11 +74,6 @@
 			path = TestHost;
 			sourceTree = "<group>";
 		};
-		71FB6DCA2D1DD37C0076DD97 /* ACWebSocketClient */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ACWebSocketClient;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +105,9 @@
 		71FB6DBE2D1DD37C0076DD97 = {
 			isa = PBXGroup;
 			children = (
+				718F42612D1F928200C7CE0B /* README.md */,
 				71AC59902D1DF03B0069BB1F /* Sources */,
 				71AC599E2D1DF0610069BB1F /* Tests */,
-				71FB6DCA2D1DD37C0076DD97 /* ACWebSocketClient */,
 				71AC59EF2D1E193F0069BB1F /* TestHost */,
 				71FB6DC92D1DD37C0076DD97 /* Products */,
 			);
@@ -176,7 +173,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				71AC59902D1DF03B0069BB1F /* Sources */,
-				71FB6DCA2D1DD37C0076DD97 /* ACWebSocketClient */,
 			);
 			name = ACWebSocketClient;
 			packageProductDependencies = (
@@ -264,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				718F42622D1F928200C7CE0B /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@ import ACWebSocketClient
 @main
 struct TestHostApp: App {
     let persistenceController = PersistenceController.shared
+    let client = AzuracastWebSocketClient(serverName: "example.com", shortCode: "station")
 
     var body: some Scene {
         WindowGroup {
