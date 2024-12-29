@@ -91,6 +91,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				2B91C24F7C386A3BE9C3DBAA /* ACWebSocketClient.podspec */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for ACWebSocketClient */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -155,7 +156,6 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				2B91C24F7C386A3BE9C3DBAA /* ACWebSocketClient.podspec */,
 				33451AB35579472D008FFC15 /* README.md */,
 				4488B1E37DF4EA13CF00D237 /* LICENSE */,
 			);

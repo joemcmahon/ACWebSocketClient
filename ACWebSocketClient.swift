@@ -1,5 +1,5 @@
 //
-//  AzuracastWebSocketClient.swift
+//  ACWebSocketClient.swift
 //
 //  Created by Joe McMahon on 12/18/24.
 //
@@ -25,6 +25,7 @@ public class ACWebSocketClient: ObservableObject {
     var serverName: String?
     var shortCode: String?
     var defaultDJ: String?
+    var debugLevel: Int = 0
     
     private var lastResult: ACStreamStatus?
         
@@ -41,10 +42,18 @@ public class ACWebSocketClient: ObservableObject {
     }
 
     /// Add a subscriber for metadata updates
-    func addSubscriber(callback: @escaping MetadataCallback<ACStreamStatus>) {
+    public func addSubscriber(callback: @escaping MetadataCallback<ACStreamStatus>) {
             subscribers.append(callback)
     }
 
+    public func setDefaultDJ(name: String) {
+        defaultDJ = name
+    }
+    
+    public func debug(to: Int) {
+        debugLevel = to
+    }
+    
     /// Notify all suscribers when an update occurs
     private func notifySubscribers(with data: ACStreamStatus) {
         for callback in subscribers {
@@ -68,11 +77,11 @@ public class ACWebSocketClient: ObservableObject {
     
     /// Connects to the WebSocket API and sends the subscription message.
     public func connect() {
-        if status.isConnected { disconnect() }
+        if status.connection == ACConnectionState.connected { disconnect() }
         webSocketTask = urlSession.webSocketTask(with: self.webSocketURL!)
         webSocketTask?.resume()
         DispatchQueue.main.async {
-            self.status.isConnected = true
+            self.status.connection = ACConnectionState.connected
         }
         
         sendSubscriptionMessage()
@@ -83,7 +92,7 @@ public class ACWebSocketClient: ObservableObject {
     public func disconnect() {
         webSocketTask?.cancel(with: .normalClosure, reason: nil)
         DispatchQueue.main.async {
-            self.status.isConnected = false
+            self.status.connection = ACConnectionState.disconnected
         }
     }
     
@@ -103,7 +112,7 @@ public class ACWebSocketClient: ObservableObject {
             }
         } else {
             print("Failed to encode subscription message")
-            status.isConnected = false
+            status.connection = ACConnectionState.failedSubscribe
         }
     }
     
@@ -125,7 +134,7 @@ public class ACWebSocketClient: ObservableObject {
             case .failure(let error):
                 print("WebSocket error: \(error)")
                 DispatchQueue.main.async {
-                    self.status.isConnected = false
+                    self.status.connection = ACConnectionState.disconnected
                 }
             }
             
@@ -151,6 +160,8 @@ public class ACWebSocketClient: ObservableObject {
         do {
             print("parsing metadata")
             let parser = ParseWebSocketData(data: data, defaultDJ: defaultDJ)
+            parser.debug(to: debugLevel)
+            
             // I can hard-unwrap this because I had to have a value to connect at all.
             let result = try parser.parse(shortCode: shortCode!)
             DispatchQueue.main.async {

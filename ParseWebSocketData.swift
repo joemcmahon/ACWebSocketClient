@@ -1,6 +1,5 @@
 //
 //  ParseWebSocketData.swift
-//  RadioSpiral3
 //
 //  Created by Joe McMahon on 12/21/24.
 //
@@ -11,10 +10,19 @@ import Combine
 public class ParseWebSocketData {
     var data: Data
     var defaultDJ: String?
+    private var debugLevel: Int = 0
     
     public init(data: Data, status: ACStreamStatus? = nil, defaultDJ: String?) {
         self.data = data
         self.defaultDJ = defaultDJ
+    }
+    
+    public func debug(to: Int) {
+        // 0 - no debug
+        // 1 - debug extracted fields
+        // 2 - debug subsctructs
+        // 4 - full metadata dump
+        debugLevel = to
     }
     
     @Published var status: ACStreamStatus = ACStreamStatus()
@@ -29,6 +37,7 @@ public class ParseWebSocketData {
         // If I do find a way to fix that, I will absolutely switch to Codable.
         let json = try JSONSerialization.jsonObject(with: data, options: [])
         if let nowPlayingData = json as? [String: Any] {
+            if debugLevel & 4 != 0 { print("nowPlayingData: \(nowPlayingData)") }
             self.status = ACStreamStatus()
             
             // 'connect' message
@@ -39,12 +48,17 @@ public class ParseWebSocketData {
                 let subs = connect?["subs"] as? Dictionary<String, Any>
                 let sub = subs?["station:\(shortCode)"] as? Dictionary<String, Any>
                 let publications = sub?["publications"] as? [Any]
+                if publications == nil {
+                    self.status.connection = ACConnectionState.failedSubscribe
+                    return self.status
+                }
                 let pub = publications?[0] as? Dictionary<String, Any>
                 let data = pub?["data"] as? Dictionary<String, Any>
                 let np = data?["np"] as? Dictionary<String, Any>
 
                 let live = np?["live"] as? Dictionary<String, Any>
                 self.status = setDJ(live: live, status: self.status, defaultDJ: defaultDJ)
+                if debugLevel & 2 != 0 { print("live: \(String(describing: live))") }
 
                 /*
                  Next song data is available, but StreamStatus doesn't support it yet
@@ -60,6 +74,7 @@ public class ParseWebSocketData {
                 // Chain down to current song
                 let current = np?["now_playing"] as? Dictionary<String, Any>
                 let current_song = current?["song"] as? Dictionary<String, Any>
+                if debugLevel & 2 != 0 { print("current song: \(String(describing: current_song))") }
                 
                 // Extract track info
                 status.album = current_song?["album"] as! String
@@ -67,6 +82,12 @@ public class ParseWebSocketData {
                 status.track = current_song?["title"] as! String
                 let artURLString = current_song?["art"] as! String
                 status.artwork = URL(string: artURLString)
+                if debugLevel & 1 != 0 {
+                    print("album: \(status.album)")
+                    print("track: \(status.track)")
+                    print("artist: \(status.artist)")
+                    print("art: \(artURLString)")
+                }
 
                 // We parsed the data, so this struct has changed
                 status.changed = true
@@ -102,10 +123,13 @@ public class ParseWebSocketData {
         status.isLiveDJ = true
         if status.dj == "" {
             status.isLiveDJ = false
-            guard let dj = defaultDJ else { return status }
+            guard let dj = defaultDJ else {
+                if debugLevel & 1 != 0 { print("DJ: \(String(describing: defaultDJ))") }
+                return status
+            }
                 status.dj = dj
+                if debugLevel & 1 != 0 { print("DJ: \(dj)") }
         }
         return status
     }
-
 }

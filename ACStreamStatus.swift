@@ -1,16 +1,22 @@
 //
-//  StreamStatus.swift
-//  RadioSpiral3
+//  ACStreamStatus.swift
 //
 //  Created by Joe McMahon on 12/21/24.
 //
 
 import Foundation
 
+public enum ACConnectionState {
+    case connected
+    case disconnected
+    case stationNotFound
+    case failedSubscribe
+}
+
 public class ACStreamStatus: Equatable {
     
     public static func == (lhs: ACStreamStatus, rhs: ACStreamStatus) -> Bool {
-           lhs.isConnected == rhs.isConnected
+        lhs.connection == rhs.connection
         && lhs.isLiveDJ == rhs.isLiveDJ
         && lhs.track == rhs.track
         && lhs.artist == rhs.artist
@@ -19,7 +25,7 @@ public class ACStreamStatus: Equatable {
     }
     
     init() {
-        self.isConnected = false
+        self.connection = ACConnectionState.disconnected
         self.changed = true
         self.isLiveDJ = false
         self.track = ""
@@ -27,8 +33,8 @@ public class ACStreamStatus: Equatable {
         self.album = ""
         self.dj = ""
     }
-    init(isConnected: Bool, changed: Bool, isLiveDJ: Bool, track: String, artist: String, album: String, dj: String, artwork: URL?) {
-        self.isConnected = isConnected
+    init(connection: ACConnectionState, changed: Bool, isLiveDJ: Bool, track: String, artist: String, album: String, dj: String, artwork: URL?) {
+        self.connection = connection
         self.changed = changed
         self.isLiveDJ = isLiveDJ
         self.track = track
@@ -38,7 +44,7 @@ public class ACStreamStatus: Equatable {
         self.artwork = artwork
     }
     
-    public var isConnected: Bool
+    public var connection: ACConnectionState
     public var changed: Bool
     public var isLiveDJ: Bool
     public var track: String
