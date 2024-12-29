@@ -1,0 +1,440 @@
+{
+  "channel": "station:radiospiral",
+  "pub": {
+    "data": {
+      "np": {
+        "station": {
+          "id": 1,
+          "name": "RadioSpiral",
+          "shortcode": "radiospiral",
+          "description": "Captivating electronica 24/7. See radiospiral.net/calendar for live DJ schedule.",
+          "frontend": "icecast",
+          "backend": "liquidsoap",
+          "timezone": "America/Los_Angeles",
+          "listen_url": "https://radio2.radiospiral.net:8000/stream.mp3",
+          "url": "https://radiospiral.net",
+          "public_player_url": "https://radio2.radiospiral.net/public/radiospiral",
+          "playlist_pls_url": "https://radio2.radiospiral.net/public/radiospiral/playlist.pls",
+          "playlist_m3u_url": "https://radio2.radiospiral.net/public/radiospiral/playlist.m3u",
+          "is_public": true,
+          "mounts": [
+            {
+              "id": 1,
+              "name": "/stream.mp3 (128kbps MP3)",
+              "url": "https://radio2.radiospiral.net:8000/stream.mp3",
+              "bitrate": 128,
+              "format": "mp3",
+              "listeners": {
+                "total": 2,
+                "unique": 2,
+                "current": 2
+              },
+              "path": "/stream.mp3",
+              "is_default": true
+            }
+          ],
+          "remotes": [],
+          "hls_enabled": false,
+          "hls_is_default": false,
+          "hls_url": null,
+          "hls_listeners": 0
+        },
+        "listeners": {
+          "total": 2,
+          "unique": 2,
+          "current": 2
+        },
+        "live": {
+          "is_live": false,
+          "streamer_name": "",
+          "broadcast_start": null,
+          "art": null
+        },
+        "now_playing": {
+          "sh_id": 58207,
+          "played_at": 1734839680,
+          "duration": 900,
+          "playlist": "Spud",
+          "streamer": "",
+          "is_request": false,
+          "song": {
+            "id": "bc0fcc0006f097941eeb64bca63524ee",
+            "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/56bed7b84813058e12277412-1718534289.jpg",
+            "custom_fields": {
+              "intensity": null
+            },
+            "text": "Glenn Sogge - Phases of the Spheres, Part 1",
+            "artist": "Glenn Sogge",
+            "title": "Phases of the Spheres, Part 1",
+            "album": "Zodiac",
+            "genre": "",
+            "isrc": "",
+            "lyrics": ""
+          },
+          "elapsed": 158,
+          "remaining": 742
+        },
+        "playing_next": {
+          "cued_at": 1734839076,
+          "played_at": 1734840572,
+          "duration": 384,
+          "playlist": "Spud",
+          "is_request": false,
+          "song": {
+            "id": "2980806ece5273b54342e37fa9a1ed7d",
+            "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/2d9d0849923c442cf46781ec-1718541158.jpg",
+            "custom_fields": {
+              "intensity": null
+            },
+            "text": "peter james - memories of dust",
+            "artist": "peter james",
+            "title": "memories of dust",
+            "album": "senessence",
+            "genre": "",
+            "isrc": "",
+            "lyrics": ""
+          }
+        },
+        "song_history": [
+          {
+            "sh_id": 58205,
+            "played_at": 1734839084,
+            "duration": 598,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "06b97384a0cad502f302d8644294e648",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/c21789a185918980ff10ab0e-1718533153.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Eisenlager - NachtPflanzen",
+              "artist": "Eisenlager",
+              "title": "NachtPflanzen",
+              "album": "Gardens in Candy Land",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58203,
+            "played_at": 1734837782,
+            "duration": 1302,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "8e66bbf37b0c29577533a4d1b9db8d8d",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/c092da68cda5bf0206d62bd3-1718541083.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "onewayness + Modulator ESP - This Orb of Stars Fixed Infinitely",
+              "artist": "onewayness + Modulator ESP",
+              "title": "This Orb of Stars Fixed Infinitely",
+              "album": "Orbital Transits",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58202,
+            "played_at": 1734837352,
+            "duration": 430,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "25b05288ceb6727241b250ac5b3f052c",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/29df5d7eb99428d3d5a70a86-1718537182.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Mukunda's Friends - Paramatma Expansion, Part 2",
+              "artist": "Mukunda's Friends",
+              "title": "Paramatma Expansion, Part 2",
+              "album": "Pastimes of Creation",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58201,
+            "played_at": 1734836473,
+            "duration": 881,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "2fd9d3f457b8895eefffa75ba86d7294",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/d2195b0438eb25cae97b5470",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Robert Carty - Waves",
+              "artist": "Robert Carty",
+              "title": "Waves",
+              "album": "Photonic Movements",
+              "genre": "Ambient",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58200,
+            "played_at": 1734836233,
+            "duration": 243,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "845a2ef0635646e7c3681a19d3348d83",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/21047058f103b323cfc7f320-1718539411.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Sheleah Nahshon - Mountain Spirit",
+              "artist": "Sheleah Nahshon",
+              "title": "Mountain Spirit",
+              "album": "SANCTUARY",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58198,
+            "played_at": 1734835968,
+            "duration": 264,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "44922859b9fe5200b41550d31ecaf63e",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/5c3e1cde10246fde798502f6",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "windspace - Valles Marinaris",
+              "artist": "windspace",
+              "title": "Valles Marinaris",
+              "album": "Zephyr",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58197,
+            "played_at": 1734834840,
+            "duration": 1131,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "d94182217ba939fe3ad9b269368904cb",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/8b81103c28fe69e1a797a5d7",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Dreamhub - Horizon VII",
+              "artist": "Dreamhub",
+              "title": "Horizon VII",
+              "album": "Soil Horizons",
+              "genre": "Ambient",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58195,
+            "played_at": 1734834337,
+            "duration": 503,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "85c471d3697c7275cf76c3ee7f5fae89",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/59c2fc49d4665c36ea0c5bf9-1718534369.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Fabio Keiner - midnight meditation II",
+              "artist": "Fabio Keiner",
+              "title": "midnight meditation II",
+              "album": "midnight meditation",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58193,
+            "played_at": 1734833951,
+            "duration": 389,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "09cd70705919dba571efad840a4a8b5f",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/791da203ea4a9b602205e3e5-1731902040.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Forrest Fang - Forever Cascades",
+              "artist": "Forrest Fang",
+              "title": "Forever Cascades",
+              "album": "Forever Cascades (name-your-price)",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58191,
+            "played_at": 1734833328,
+            "duration": 625,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "cd147193cbd041d58f4c34616757ed73",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/3989ebadf7d69bd14570cbcb",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Natural Life Essence - Green Grass (Storm Behind)",
+              "artist": "Natural Life Essence",
+              "title": "Green Grass (Storm Behind)",
+              "album": "Imaginary Motion",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58190,
+            "played_at": 1734833139,
+            "duration": 192,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "975e1d29b0559b7a91b4ce66eff32de3",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/a3ba8aa9049a32f8d90286a8-1718538862.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Sanya D. - Molecular Funk",
+              "artist": "Sanya D.",
+              "title": "Molecular Funk",
+              "album": "Loop Until Death",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58189,
+            "played_at": 1734832895,
+            "duration": 246,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "462ea62a7ec8beba22ef079e344cf19a",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/a758d9eb4b2100bf2c407b6d-1718541345.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "sonaura - gone",
+              "artist": "sonaura",
+              "title": "gone",
+              "album": "Strays (A)",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58188,
+            "played_at": 1734832553,
+            "duration": 344,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "01a65e618acd21f57e13f9f098a9d043",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/47bdf034800ad6e38b7e6234",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Magnus Josefsson - Ostrava",
+              "artist": "Magnus Josefsson",
+              "title": "Ostrava",
+              "album": "Acid Air",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58187,
+            "played_at": 1734832270,
+            "duration": 286,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "f4aa7153e5bfac73fcd6972f50699aa7",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/32ca5ca115d61658493a93cb",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Magnetic Wind - Harbor",
+              "artist": "Magnetic Wind",
+              "title": "Harbor",
+              "album": "Believe",
+              "genre": "New Age",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 58186,
+            "played_at": 1734832046,
+            "duration": 227,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "dccb9879e242802ba9ca2e595fa2d04a",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/92c7367c4dab95ea109d9f85-1718534510.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Flavigula - Soxel Riz Soliz",
+              "artist": "Flavigula",
+              "title": "Soxel Riz Soliz",
+              "album": "Songs for Looptober",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          }
+        ],
+        "is_online": true,
+        "cache": "event"
+      },
+      "triggers": [
+        "listener_gained"
+      ],
+      "current_time": 1734839834
+    },
+    "offset": 195071
+  }
+}

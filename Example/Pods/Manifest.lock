@@ -1,0 +1,27 @@
+PODS:
+  - ACWebSocketClient (0.1.0)
+  - Nimble (10.0.0)
+  - Quick (2.2.1)
+
+DEPENDENCIES:
+  - ACWebSocketClient (from `../`)
+  - Nimble (~> 10.0.0)
+  - Quick (~> 2.2.0)
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  ACWebSocketClient:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ACWebSocketClient: 65e61bcdf525c35c8d00d66084def6d8c126b7dd
+  Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
+  Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
+
+PODFILE CHECKSUM: 8ad3fc2bc0a2a5ad7bf62d48da2d87708a999003
+
+COCOAPODS: 1.16.2

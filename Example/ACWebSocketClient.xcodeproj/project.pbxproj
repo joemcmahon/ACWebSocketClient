@@ -15,6 +15,10 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		71078F0A2D210AAF009D5775 /* channel_no_streamer.json in Resources */ = {isa = PBXBuildFile; fileRef = 71078F062D210AAF009D5775 /* channel_no_streamer.json */; };
+		71078F0B2D210AAF009D5775 /* connect.json in Resources */ = {isa = PBXBuildFile; fileRef = 71078F082D210AAF009D5775 /* connect.json */; };
+		71078F0C2D210AAF009D5775 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 71078F092D210AAF009D5775 /* empty.json */; };
+		71078F0D2D210AAF009D5775 /* channel_w_streamer.json in Resources */ = {isa = PBXBuildFile; fileRef = 71078F072D210AAF009D5775 /* channel_w_streamer.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B91C24F7C386A3BE9C3DBAA /* ACWebSocketClient.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ACWebSocketClient.podspec; path = ../ACWebSocketClient.podspec; sourceTree = "<group>"; };
-		33451AB35579472D008FFC15 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		4488B1E37DF4EA13CF00D237 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2B91C24F7C386A3BE9C3DBAA /* ACWebSocketClient.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ACWebSocketClient.podspec; path = ../ACWebSocketClient.podspec; sourceTree = "<group>"; };
+		33451AB35579472D008FFC15 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4488B1E37DF4EA13CF00D237 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		583819F55C0AD63B49C828D3 /* Pods-ACWebSocketClient_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACWebSocketClient_Example.release.xcconfig"; path = "Target Support Files/Pods-ACWebSocketClient_Example/Pods-ACWebSocketClient_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ACWebSocketClient_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACWebSocketClient_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +46,10 @@
 		607FACE51AFB9204008FA782 /* ACWebSocketClient_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACWebSocketClient_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		71078F062D210AAF009D5775 /* channel_no_streamer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = channel_no_streamer.json; sourceTree = "<group>"; };
+		71078F072D210AAF009D5775 /* channel_w_streamer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = channel_w_streamer.json; sourceTree = "<group>"; };
+		71078F082D210AAF009D5775 /* connect.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = connect.json; sourceTree = "<group>"; };
+		71078F092D210AAF009D5775 /* empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
 		7BC2A1DBE0FA35660FA8A71C /* Pods_ACWebSocketClient_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACWebSocketClient_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D46F7E2843A79CECCDA9B49 /* Pods_ACWebSocketClient_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACWebSocketClient_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		910E4B87A00F42E04AE8C0ED /* Pods-ACWebSocketClient_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACWebSocketClient_Example.debug.xcconfig"; path = "Target Support Files/Pods-ACWebSocketClient_Example/Pods-ACWebSocketClient_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +85,6 @@
 				B94F0146F6A5C195F9679A1C /* Pods-ACWebSocketClient_Tests.debug.xcconfig */,
 				ED20DF8A4EE97F33FCF1EFBA /* Pods-ACWebSocketClient_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,6 +135,10 @@
 			isa = PBXGroup;
 			children = (
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				71078F062D210AAF009D5775 /* channel_no_streamer.json */,
+				71078F072D210AAF009D5775 /* channel_w_streamer.json */,
+				71078F082D210AAF009D5775 /* connect.json */,
+				71078F092D210AAF009D5775 /* empty.json */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -214,10 +225,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6PLL9M5SE2;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6PLL9M5SE2;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -228,6 +241,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -257,6 +271,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71078F0A2D210AAF009D5775 /* channel_no_streamer.json in Resources */,
+				71078F0B2D210AAF009D5775 /* connect.json in Resources */,
+				71078F0C2D210AAF009D5775 /* empty.json in Resources */,
+				71078F0D2D210AAF009D5775 /* channel_w_streamer.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +517,9 @@
 			baseConfigurationReference = 910E4B87A00F42E04AE8C0ED /* Pods-ACWebSocketClient_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6PLL9M5SE2;
 				INFOPLIST_FILE = ACWebSocketClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -514,7 +534,9 @@
 			baseConfigurationReference = 583819F55C0AD63B49C828D3 /* Pods-ACWebSocketClient_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6PLL9M5SE2;
 				INFOPLIST_FILE = ACWebSocketClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -528,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B94F0146F6A5C195F9679A1C /* Pods-ACWebSocketClient_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 6PLL9M5SE2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -537,6 +560,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -550,11 +574,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ED20DF8A4EE97F33FCF1EFBA /* Pods-ACWebSocketClient_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 6PLL9M5SE2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,0 +1,22 @@
+{
+  "name": "ACWebSocketClient",
+  "version": "0.1.0",
+  "summary": "A short description of ACWebSocketClient.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/joemcmahon/ACWebSocketClient",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "joemcmahon": "joe.mcmahon@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/joemcmahon/ACWebSocketClient.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "ACWebSocketClient/Classes/**/*"
+}

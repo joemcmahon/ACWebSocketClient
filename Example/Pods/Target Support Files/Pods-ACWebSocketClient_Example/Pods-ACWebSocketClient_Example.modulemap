@@ -1,0 +1,6 @@
+framework module Pods_ACWebSocketClient_Example {
+  umbrella header "Pods-ACWebSocketClient_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

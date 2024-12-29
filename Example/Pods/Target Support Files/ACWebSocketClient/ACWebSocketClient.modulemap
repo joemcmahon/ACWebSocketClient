@@ -1,0 +1,6 @@
+framework module ACWebSocketClient {
+  umbrella header "ACWebSocketClient-umbrella.h"
+
+  export *
+  module * { export * }
+}

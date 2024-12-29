@@ -1,0 +1,440 @@
+{
+  "channel": "station:radiospiral",
+  "pub": {
+    "data": {
+      "np": {
+        "station": {
+          "id": 1,
+          "name": "RadioSpiral",
+          "shortcode": "radiospiral",
+          "description": "Captivating electronica 24/7. See radiospiral.net/calendar for live DJ schedule.",
+          "frontend": "icecast",
+          "backend": "liquidsoap",
+          "timezone": "America/Los_Angeles",
+          "listen_url": "https://radio2.radiospiral.net:8000/stream.mp3",
+          "url": "https://radiospiral.net",
+          "public_player_url": "https://radio2.radiospiral.net/public/radiospiral",
+          "playlist_pls_url": "https://radio2.radiospiral.net/public/radiospiral/playlist.pls",
+          "playlist_m3u_url": "https://radio2.radiospiral.net/public/radiospiral/playlist.m3u",
+          "is_public": true,
+          "mounts": [
+            {
+              "id": 1,
+              "name": "/stream.mp3 (128kbps MP3)",
+              "url": "https://radio2.radiospiral.net:8000/stream.mp3",
+              "bitrate": 128,
+              "format": "mp3",
+              "listeners": {
+                "total": 13,
+                "unique": 12,
+                "current": 13
+              },
+              "path": "/stream.mp3",
+              "is_default": true
+            }
+          ],
+          "remotes": [],
+          "hls_enabled": false,
+          "hls_is_default": false,
+          "hls_url": null,
+          "hls_listeners": 0
+        },
+        "listeners": {
+          "total": 13,
+          "unique": 12,
+          "current": 13
+        },
+        "live": {
+          "is_live": true,
+          "streamer_name": "Around the Campfire",
+          "broadcast_start": 1734573618,
+          "art": "https://radio2.radiospiral.net/api/station/radiospiral/streamer/8/art-1731719725.jpg"
+        },
+        "now_playing": {
+          "sh_id": 57378,
+          "played_at": 1734573691,
+          "duration": 0,
+          "playlist": "",
+          "streamer": "Around the Campfire",
+          "is_request": false,
+          "song": {
+            "id": "ecd58986e453799a1819a8c723d04f94",
+            "art": "https://radio2.radiospiral.net/api/station/radiospiral/streamer/8/art-1731719725.jpg",
+            "custom_fields": {
+              "intensity": null
+            },
+            "text": "Gypsy Witch - Thus Spake the Gypsy Witch",
+            "artist": "Gypsy Witch",
+            "title": "Thus Spake the Gypsy Witch",
+            "album": "",
+            "genre": "",
+            "isrc": "",
+            "lyrics": ""
+          },
+          "elapsed": 138,
+          "remaining": 0
+        },
+        "playing_next": {
+          "cued_at": 1734572093,
+          "played_at": 1734573824,
+          "duration": 178,
+          "playlist": "Spud",
+          "is_request": false,
+          "song": {
+            "id": "c22fa748ffebb903504c18ad09335d33",
+            "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/eced6010619e66b6a6fa35b5-1718537565.jpg",
+            "custom_fields": {
+              "intensity": null
+            },
+            "text": "Ocean in a Bottle - Global Warming on Mars 2130 Part 3",
+            "artist": "Ocean in a Bottle",
+            "title": "Global Warming on Mars 2130 Part 3",
+            "album": "Global Warming on Mars 2130",
+            "genre": "",
+            "isrc": "",
+            "lyrics": ""
+          }
+        },
+        "song_history": [
+          {
+            "sh_id": 57377,
+            "played_at": 1734573631,
+            "duration": 60,
+            "playlist": "",
+            "streamer": "Around the Campfire",
+            "is_request": false,
+            "song": {
+              "id": "c974b62745f82dacfedf51c6ae3575b4",
+              "art": "https://radio2.radiospiral.net/static/img/generic_song.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Whispering Cosmos - [LIVE]",
+              "artist": "Whispering Cosmos",
+              "title": "[LIVE]",
+              "album": "",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57375,
+            "played_at": 1734572549,
+            "duration": 1170,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "f3f7bfa817a620547768df7b23c71aff",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/244f830cfe283dc5fba23c6e",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Robert Carty - Water Dream 4",
+              "artist": "Robert Carty",
+              "title": "Water Dream 4",
+              "album": "Water Dream",
+              "genre": "Light Ambient",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57374,
+            "played_at": 1734572098,
+            "duration": 453,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "93f2a42b071d5087d912c81cd1dabc95",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/688d86aaec2ed9d9623a1497-1718533687.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "the_kodek_ghost - All journeys must end",
+              "artist": "the_kodek_ghost",
+              "title": "All journeys must end",
+              "album": "Shoemaker Levy 9 Commemoration",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57372,
+            "played_at": 1734570978,
+            "duration": 1122,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "af070d0fc4a21829a09f0b5fb2b2a1f4",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/ba0f43a3712fb6de5c74d474-1718531585.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Another Neglected Hobby - Leaves Fall",
+              "artist": "Another Neglected Hobby",
+              "title": "Leaves Fall",
+              "album": "October",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57371,
+            "played_at": 1734570721,
+            "duration": 259,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "9c9e3aa9e12c79676969c5e2effa117f",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/5b297d85ed685dfd48a27cc1-1718539768.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Spheruleus - Time Stands Still",
+              "artist": "Spheruleus",
+              "title": "Time Stands Still",
+              "album": "A Vision Obscured",
+              "genre": "Ambient",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57370,
+            "played_at": 1734570382,
+            "duration": 342,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "5c06bbbe1b40e6c81d53e267c37ec934",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/64a5057a134631aa97cfdffd",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "mindSpiral - Hiraku Opens the Screen",
+              "artist": "mindSpiral",
+              "title": "Hiraku Opens the Screen",
+              "album": "Triangulum",
+              "genre": "Ambient",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57369,
+            "played_at": 1734570049,
+            "duration": 336,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "bd0256f6fbd450801b8c5a69f546f03e",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/0aa78fa6fd1b2c7b225e33f9-1718541015.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "kalabi - Giro Day",
+              "artist": "kalabi",
+              "title": "Giro Day",
+              "album": "Music For Job Centres",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57366,
+            "played_at": 1734568931,
+            "duration": 1118,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "f8a2e165cdd8d6d5f7ab44fcca588a1c",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/2c63b9673d133945faf58c00-1718536016.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Juta Takahashi - Daydream",
+              "artist": "Juta Takahashi",
+              "title": "Daydream",
+              "album": "Remembrance",
+              "genre": "Ambient",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57364,
+            "played_at": 1734568247,
+            "duration": 687,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "af8127d4bc68c8f67351405882003afb",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/1852228f2b902824b0237f6b-1718540888.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "eyes cast down - Exquisite Divination of Patterns",
+              "artist": "eyes cast down",
+              "title": "Exquisite Divination of Patterns",
+              "album": "Divinations",
+              "genre": "Ambient",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57363,
+            "played_at": 1734567906,
+            "duration": 341,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "914dde649f9944548362ddb3c459d64d",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/5fcd8feab016701f2ee7af25-1718537317.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Nettless - The Other Gods",
+              "artist": "Nettless",
+              "title": "The Other Gods",
+              "album": "From Beyond",
+              "genre": "Ambient",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57362,
+            "played_at": 1734567385,
+            "duration": 523,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "a9dde459389e5c44691d6d0b0ce1c274",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/6017fe1fa2949ecd28412139-1718540548.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Tone Ghost Ether - Red Light Falling",
+              "artist": "Tone Ghost Ether",
+              "title": "Red Light Falling",
+              "album": "Condor Sail Curve",
+              "genre": "Ambient",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57360,
+            "played_at": 1734566969,
+            "duration": 419,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "0ae41fb58247ef422a667395eea1aaa2",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/0d6087c013307f281efd65ec-1718537910.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Pekka - Kosmophobia",
+              "artist": "Pekka",
+              "title": "Kosmophobia",
+              "album": "Ambientology EP",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57359,
+            "played_at": 1734565635,
+            "duration": 1336,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "f9503acde90b77b25c60bfa4f9397dee",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/26b8dbcc362a7161d81b9573",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Nimanty - Tears Of The Cosmos",
+              "artist": "Nimanty",
+              "title": "Tears Of The Cosmos",
+              "album": "Tears Of The Cosmos",
+              "genre": "",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57357,
+            "played_at": 1734565203,
+            "duration": 431,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "c2a838f3ece0fcc67dd716d7f8dda6f5",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/1a9ce64c713fe02fd4e95293",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Magnetic Wind - Believe",
+              "artist": "Magnetic Wind",
+              "title": "Believe",
+              "album": "Believe",
+              "genre": "New Age",
+              "isrc": "",
+              "lyrics": ""
+            }
+          },
+          {
+            "sh_id": 57356,
+            "played_at": 1734564756,
+            "duration": 449,
+            "playlist": "Spud",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+              "id": "cfbf8d89a8bfecc42e9ece389e1fce8b",
+              "art": "https://radio2.radiospiral.net/api/station/radiospiral/art/86743782ee1d370c50640961-1718539573.jpg",
+              "custom_fields": {
+                "intensity": null
+              },
+              "text": "Silvercord and Altus - Journeys From the Gravity of Mind",
+              "artist": "Silvercord and Altus",
+              "title": "Journeys From the Gravity of Mind",
+              "album": "Lullaby",
+              "genre": "Ambient",
+              "isrc": "",
+              "lyrics": ""
+            }
+          }
+        ],
+        "is_online": true,
+        "cache": "event"
+      },
+      "triggers": [
+        "listener_gained"
+      ],
+      "current_time": 1734573824
+    },
+    "offset": 174628
+  }
+}
