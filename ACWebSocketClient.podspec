@@ -42,6 +42,7 @@ and displays the updates as they arrive.
 
   s.ios.deployment_target = '13.0'
   s.macos.deployment_target = '10.15'
+  s.tvos.deployment_target = '16'
   s.swift_versions = '5.0'
 
   s.source_files = 'Sources/**/*'
