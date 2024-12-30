@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ACWebSocketClient'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'ACWebSocketClient provides a real-time API for Azuracast stream metadata.'
 
   s.description      = <<-DESC
@@ -13,7 +13,7 @@ Azuracast provides high-frequency metadata updates via both a websocket interfac
 and an SSE one.Apple
 
 This library connects to an Azuracast websocket server and receives and parses
-the metadata into a struct, `ACStreamStatus`. At the moment (version 0.1.1),
+the metadata into a struct, `ACStreamStatus`. At the moment (version 0.1.2),
 only the track name, artist name, album name, and streamer (DJ) name are
 available, but much more data is available; I intend to expand this API in the
 future to add more metadata to ACStreamStatus.
@@ -41,6 +41,7 @@ and displays the updates as they arrive.
   s.social_media_url = 'https://bsky.app/profile/equinoxdeschanel.bsky.social'
 
   s.ios.deployment_target = '13.0'
+  s.macos.deployment_target = '10.15'
   s.swift_versions = '5.0'
 
   s.source_files = 'Sources/**/*'
