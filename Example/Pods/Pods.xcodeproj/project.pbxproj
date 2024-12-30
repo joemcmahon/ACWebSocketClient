@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -52,10 +52,6 @@
 		65FFD1FF51415A129AE7FAECA8E49557 /* ACWebSocketClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC3E0F71EFD4D504E55AA21CEFE15C0 /* ACWebSocketClient-dummy.m */; };
 		663CA33E4B3C31DC35E5C78FDD4B8B0A /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ACF672EF788F2241B4D2EB8E7E4102 /* QuickConfiguration.m */; };
 		69CF5C6D103C5AB5F4E96A963A1E463B /* HaveCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5087C618B40FD9BFAFEFAA266CC87 /* HaveCount.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		71078F012D2103D1009D5775 /* ParseWebSocketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71078EFF2D2103D1009D5775 /* ParseWebSocketData.swift */; };
-		71078F022D2103D1009D5775 /* ACWebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71078EFE2D2103D1009D5775 /* ACWebSocketClient.swift */; };
-		71078F032D2103D1009D5775 /* ACStreamStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71078F002D2103D1009D5775 /* ACStreamStatus.swift */; };
-		71078F052D21082C009D5775 /* ACWebSocketClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 71078F042D21082C009D5775 /* ACWebSocketClient.h */; };
 		79917D088E7C5EFB8F3FDE37E8C65969 /* CwlMachBadInstructionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 933A79CAD01AFCA46EBEC24E08992CFF /* CwlMachBadInstructionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7CAE47F90B9798A3ACD2CA130320C8FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67D5FC3912AA12AA16711C8CC0ACECC /* Foundation.framework */; };
 		7F1A51A978511856CF73C12368A85711 /* Equal+Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C727F39179CD2B17DD976E9844C63C9 /* Equal+Tuple.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -220,10 +216,6 @@
 		6C53E4A4BD96DA70A1FF6A6EF6409FC2 /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Sources/Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
 		6D64265937180D1CE4776A92C84320CA /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Sources/Quick/Configuration/Configuration.swift; sourceTree = "<group>"; };
 		70A431DC0126F0596E5DC39E181926DD /* QuickTestSuite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTestSuite.swift; path = Sources/Quick/QuickTestSuite.swift; sourceTree = "<group>"; };
-		71078EFE2D2103D1009D5775 /* ACWebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACWebSocketClient.swift; sourceTree = "<group>"; };
-		71078EFF2D2103D1009D5775 /* ParseWebSocketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseWebSocketData.swift; sourceTree = "<group>"; };
-		71078F002D2103D1009D5775 /* ACStreamStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACStreamStatus.swift; sourceTree = "<group>"; };
-		71078F042D21082C009D5775 /* ACWebSocketClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACWebSocketClient.h; sourceTree = "<group>"; };
 		7257CDD5305E867BF5296DC8E03BF3F6 /* ExampleMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleMetadata.swift; path = Sources/Quick/ExampleMetadata.swift; sourceTree = "<group>"; };
 		762EBC5F74C0131A7CFB3173DEC4D053 /* QuickConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickConfiguration.swift; path = Sources/Quick/Configuration/QuickConfiguration.swift; sourceTree = "<group>"; };
 		79A0AA2B4C42AC735A9C6DBF55E6B309 /* DSL+Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DSL+Wait.swift"; path = "Sources/Nimble/DSL+Wait.swift"; sourceTree = "<group>"; };
@@ -322,6 +314,10 @@
 		FD71553DEE111B1EC75C4892144170AB /* Nimble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.debug.xcconfig; sourceTree = "<group>"; };
 		FFD25A911E5B9C8A730A82BA3129F1AE /* Pods-ACWebSocketClient_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ACWebSocketClient_Tests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		71C1006D2D221B050025955D /* Sources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Sources; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		388BD2FC050818637904888DC7D7512F /* Frameworks */ = {
@@ -558,10 +554,7 @@
 		D316DF73677D07DFAEEB0FD5E638DDC6 /* ACWebSocketClient */ = {
 			isa = PBXGroup;
 			children = (
-				71078F042D21082C009D5775 /* ACWebSocketClient.h */,
-				71078EFE2D2103D1009D5775 /* ACWebSocketClient.swift */,
-				71078EFF2D2103D1009D5775 /* ParseWebSocketData.swift */,
-				71078F002D2103D1009D5775 /* ACStreamStatus.swift */,
+				71C1006D2D221B050025955D /* Sources */,
 				2D3F299B57FAEDF09E84871FDAB79355 /* Pod */,
 				88A4DB18A85DAD3330A2B83CC09F0ABC /* Support Files */,
 			);
@@ -701,7 +694,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				992B03BB57CFE92BE455165E4A2F0A6F /* ACWebSocketClient-umbrella.h in Headers */,
-				71078F052D21082C009D5775 /* ACWebSocketClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,6 +720,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				71C1006D2D221B050025955D /* Sources */,
 			);
 			name = ACWebSocketClient;
 			productName = ACWebSocketClient;
@@ -885,9 +880,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				65FFD1FF51415A129AE7FAECA8E49557 /* ACWebSocketClient-dummy.m in Sources */,
-				71078F012D2103D1009D5775 /* ParseWebSocketData.swift in Sources */,
-				71078F022D2103D1009D5775 /* ACWebSocketClient.swift in Sources */,
-				71078F032D2103D1009D5775 /* ACStreamStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1063,7 +1055,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-ACWebSocketClient_Example/Pods-ACWebSocketClient_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ACWebSocketClient_Example/Pods-ACWebSocketClient_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1099,7 +1095,11 @@
 				INFOPLIST_FILE = "Target Support Files/ACWebSocketClient/ACWebSocketClient-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/ACWebSocketClient/ACWebSocketClient.modulemap";
 				PRODUCT_MODULE_NAME = ACWebSocketClient;
 				PRODUCT_NAME = ACWebSocketClient;
@@ -1133,7 +1133,11 @@
 				INFOPLIST_FILE = "Target Support Files/Quick/Quick-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/Quick/Quick.modulemap";
 				PRODUCT_MODULE_NAME = Quick;
 				PRODUCT_NAME = Quick;
@@ -1167,7 +1171,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-ACWebSocketClient_Tests/Pods-ACWebSocketClient_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ACWebSocketClient_Tests/Pods-ACWebSocketClient_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1203,7 +1211,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-ACWebSocketClient_Example/Pods-ACWebSocketClient_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ACWebSocketClient_Example/Pods-ACWebSocketClient_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1238,7 +1250,11 @@
 				INFOPLIST_FILE = "Target Support Files/Quick/Quick-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/Quick/Quick.modulemap";
 				PRODUCT_MODULE_NAME = Quick;
 				PRODUCT_NAME = Quick;
@@ -1309,7 +1325,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1335,7 +1352,11 @@
 				INFOPLIST_FILE = "Target Support Files/ACWebSocketClient/ACWebSocketClient-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/ACWebSocketClient/ACWebSocketClient.modulemap";
 				PRODUCT_MODULE_NAME = ACWebSocketClient;
 				PRODUCT_NAME = ACWebSocketClient;
@@ -1369,7 +1390,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-ACWebSocketClient_Tests/Pods-ACWebSocketClient_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ACWebSocketClient_Tests/Pods-ACWebSocketClient_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1469,7 +1494,11 @@
 				INFOPLIST_FILE = "Target Support Files/Nimble/Nimble-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
 				PRODUCT_MODULE_NAME = Nimble;
@@ -1503,7 +1532,11 @@
 				INFOPLIST_FILE = "Target Support Files/Nimble/Nimble-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
 				PRODUCT_MODULE_NAME = Nimble;

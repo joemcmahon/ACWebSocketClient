@@ -6,13 +6,6 @@
 
 import Foundation
 
-public enum ACConnectionState {
-    case connected
-    case disconnected
-    case stationNotFound
-    case failedSubscribe
-}
-
 public class ACStreamStatus: Equatable {
     
     public static func == (lhs: ACStreamStatus, rhs: ACStreamStatus) -> Bool {
