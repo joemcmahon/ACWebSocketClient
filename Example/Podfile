@@ -7,8 +7,5 @@ target 'ACWebSocketClient_Example' do
 
   target 'ACWebSocketClient_Tests' do
     inherit! :search_paths
-
-    pod 'Quick', '~> 2.2.0'
-    pod 'Nimble', '~> 10.0.0'
   end
 end

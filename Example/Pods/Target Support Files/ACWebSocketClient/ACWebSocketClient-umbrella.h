@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "ACWebSocketClient.h"
 
 FOUNDATION_EXPORT double ACWebSocketClientVersionNumber;
 FOUNDATION_EXPORT const unsigned char ACWebSocketClientVersionString[];
