@@ -36,7 +36,7 @@ To use the library, it is necessary to know the server name and the Azuracast
 "shortcode" name for the station. The client is set up like this:
 
   var client = ACWebSocketClient(serverName: "example.com", shortcode: "station")
-  client.addsucscriber(callbackFunc)
+  client.addSubscriber(callbackFunc)
   client.connect()
 
 The client will run in the background, calling `callbackFunc` with the
