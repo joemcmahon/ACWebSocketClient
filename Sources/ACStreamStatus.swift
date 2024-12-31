@@ -17,7 +17,7 @@ public class ACStreamStatus: Equatable {
         && lhs.dj == rhs.dj
     }
     
-    init() {
+    public init() {
         self.connection = ACConnectionState.disconnected
         self.changed = true
         self.isLiveDJ = false
@@ -26,7 +26,8 @@ public class ACStreamStatus: Equatable {
         self.album = ""
         self.dj = ""
     }
-    init(connection: ACConnectionState, changed: Bool, isLiveDJ: Bool, track: String, artist: String, album: String, dj: String, artwork: URL?) {
+    
+    public init(connection: ACConnectionState, changed: Bool, isLiveDJ: Bool, track: String, artist: String, album: String, dj: String, artwork: URL?) {
         self.connection = connection
         self.changed = changed
         self.isLiveDJ = isLiveDJ

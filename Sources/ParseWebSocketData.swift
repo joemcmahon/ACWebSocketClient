@@ -117,7 +117,7 @@ public class ParseWebSocketData {
         return status
     }
     
-    func setDJ(live: Dictionary<String, Any>?, status: ACStreamStatus, defaultDJ: String?) -> ACStreamStatus {
+    private func setDJ(live: Dictionary<String, Any>?, status: ACStreamStatus, defaultDJ: String?) -> ACStreamStatus {
         // live data: extract dj, set default if no dj and a default was supplied
         status.dj = live?["streamer_name"] as? String ?? ""
         status.isLiveDJ = true

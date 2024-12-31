@@ -15,8 +15,6 @@ public class ACWebSocketClient: ObservableObject {
     
     var status = ACStreamStatus()
         
-    private var cancellables = Set<AnyCancellable>()
-    
     private var webSocketTask: URLSessionWebSocketTask?
     private var urlSession = URLSession(configuration: .default)
     private var webSocketURL: URL?
