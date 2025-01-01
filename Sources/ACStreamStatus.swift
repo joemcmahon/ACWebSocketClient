@@ -8,6 +8,11 @@ import Foundation
 
 public class ACStreamStatus: Equatable {
     
+    /// ==: allows you to use the == operator to compare two `ACStreamStatus` instances
+    /// - Parameters:
+    ///   - lhs: one `AcStreamStatus` instance
+    ///   - rhs: a second `AcStreamStatus` instance
+    /// - Returns: `true` if they match, `false` if they don't.
     public static func == (lhs: ACStreamStatus, rhs: ACStreamStatus) -> Bool {
         lhs.connection == rhs.connection
         && lhs.isLiveDJ == rhs.isLiveDJ
@@ -17,6 +22,11 @@ public class ACStreamStatus: Equatable {
         && lhs.dj == rhs.dj
     }
     
+    ///   `init()` creates an empty `AcStreamStatus` instance
+    ///
+    ///    - stream is disconnected
+    ///    - values are changed
+    ///    - no live DJ, track, artist, album, or DJ name
     public init() {
         self.connection = ACConnectionState.disconnected
         self.changed = true
@@ -27,9 +37,16 @@ public class ACStreamStatus: Equatable {
         self.dj = ""
     }
     
-    public init(connection: ACConnectionState, changed: Bool, isLiveDJ: Bool, track: String, artist: String, album: String, dj: String, artwork: URL?) {
+    ///  `init` with all fields speciified
+    ///
+    ///  Creates a fully-populated `ACStreamStatus` instance
+    ///
+    ///  - `connection` statte is one of the valid states (see `ACConectionState`)
+    ///  - `changed` is `true` (since this is a newly-created status)
+    ///  - `isLiveDJ`, `track`, `artist`, `album`, `dj`, and `artwork` are all set to the supplied values
+    public init(connection: ACConnectionState, isLiveDJ: Bool, track: String, artist: String, album: String, dj: String, artwork: URL?) {
         self.connection = connection
-        self.changed = changed
+        self.changed = true
         self.isLiveDJ = isLiveDJ
         self.track = track
         self.artist = artist
