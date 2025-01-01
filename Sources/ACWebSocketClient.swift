@@ -7,8 +7,11 @@
 import Foundation
 import Combine
 
+/// Type describing a callback to send the current status to a subscriber.
 public typealias MetadataCallback<T> = (T) -> Void
 
+///  The `ACWebSocketClient` class allows us to connect to an Azuracast websocket server
+///  for realtime stream metadata updates via a  supplied callback.
 public class ACWebSocketClient: ObservableObject {
     // Anyone subscribed to the metadata stream
     private var subscribers: [MetadataCallback<ACStreamStatus>] = []
@@ -20,13 +23,30 @@ public class ACWebSocketClient: ObservableObject {
     private var webSocketURL: URL?
 
     
+    /// `serverName` is the name of the Azuracast server we're connecting to for the metadata stream
     var serverName: String?
+    
+    /// `shortCode` is the station name shortcode defined by Azuracast and found on the stations's profile page
     var shortCode: String?
+    
+    /// `defaultDJ`: the string to be retuned as the active DJ if no streamer is connected.
     var defaultDJ: String?
+    
+    /// `debugLevel`: for development only; set to  the sum of the flag values you want while debugging
+    /// - 0: no debug outout is printed
+    /// - 1: print the minimum data (track, artist, album, DJ)
+    /// - 2: print the raw subsections the data is extracted from
+    /// - 4: print the full set of JSON received from the stream before parsing`
     var debugLevel: Int = 0
     
     private var lastResult: ACStreamStatus?
-        
+    
+    ///  init(serverName: shortCode:)
+    ///  Initializes an `ACWebSocketClient` instance with a preset server and station.
+    /// - Parameters:
+    ///   - serverName: The server name of the server to connect to
+    ///   - `shortCode`: The Azuracast-defined shortcode from the station's profile page
+    ///   - `defaultDJ`: The DJ name to supply if no streamer is active. Useful if the station is configured to play music when no streamer is active. Defaults to `""` if no value is specified.
     public init (serverName: String?, shortCode: String?, defaultDJ: String? = "") {
         if let defaultDJ {
             self.defaultDJ = defaultDJ
@@ -39,20 +59,31 @@ public class ACWebSocketClient: ObservableObject {
         }
     }
 
-    /// Add a subscriber for metadata updates
+    
+    /// `addSubscriber(callback:)`
+    /// - Parameter callback: Callback function to be called when a change to the station metadata
+    /// is detected.
+    ///
+    /// The callback has the form `callbackFunction(status: StreamStatus)`; the `callback`
+    /// parameter should be given only `callbackFunction`.
     public func addSubscriber(callback: @escaping MetadataCallback<ACStreamStatus>) {
             subscribers.append(callback)
     }
-
+    
+    /// `setDefaultDJ(name:)`
+    /// - Parameter name: The string  to be returned as the DJ's name when no streamer is active.
     public func setDefaultDJ(name: String) {
         defaultDJ = name
     }
     
+    /// 'debug(to:)`
+    /// - Parameter to: Integer sum of the flags desired. Replaces any current setting. Use `0` to
+    /// turn off all debugging.
     public func debug(to: Int) {
         debugLevel = to
     }
     
-    /// Notify all suscribers when an update occurs
+    // Notify all suscribers when an update occurs
     private func notifySubscribers(with data: ACStreamStatus) {
         for callback in subscribers {
             callback(data)
@@ -60,7 +91,10 @@ public class ACWebSocketClient: ObservableObject {
     }
     
     
-    /// Use configurationDidChange() to (re)configure an AzuracastWebSocketClient.
+    /// `configurationDidChange(serverName: shortCode:)`
+    ///  Use `configurationDidChange()` to (re)configure an existing `ACWebSocketClient`.
+    /// Diisconnects the client if  it's connected, changes the parameters, and reconnects with the new
+    /// server and station, and clears the  last recorded stream status.
     public func configurationDidChange(serverName: String, shortCode: String) {
         self.serverName = serverName
         self.shortCode = shortCode
@@ -73,7 +107,10 @@ public class ACWebSocketClient: ObservableObject {
         self.lastResult = ACStreamStatus()
     }
     
-    /// Connects to the WebSocket API and sends the subscription message.
+    /// `connect`
+    /// Connects to the websocket API and sends the subscription message. Can be used to connect a
+    /// currently-disconnected `ACWebSocketClient` or to reconnect an already-connected one.
+    /// Marks the global status as `connected`.
     public func connect() {
         if status.connection == ACConnectionState.connected { disconnect() }
         webSocketTask = urlSession.webSocketTask(with: self.webSocketURL!)
@@ -86,7 +123,8 @@ public class ACWebSocketClient: ObservableObject {
         listenForMessages()
     }
     
-    /// Disconnects from the WebSocket API.
+    /// `disconnect`
+    /// Disconnects from the WebSocket API.  Sets the global status to `disconnected`.
     public func disconnect() {
         webSocketTask?.cancel(with: .normalClosure, reason: nil)
         DispatchQueue.main.async {
@@ -94,9 +132,19 @@ public class ACWebSocketClient: ObservableObject {
         }
     }
     
-    /// Sends the subscription message for the specified station.
+    // Sends the subscription message for the specified station.
+    // If the websocket task is already running, does nothing.
+    // If the necessary parameters aren't set, does nothing and marks
+    // `failedSubscribe` in the global status.
+    // Otherwise generates the expected subscription message and sends it.
     private func sendSubscriptionMessage() {
         guard let webSocketTask = webSocketTask else { return }
+        guard let _ = self.serverName,
+              let _ = self.shortCode else {
+            status.connection = ACConnectionState.failedSubscribe
+            status.changed = true
+            return
+        }
         
         let subscriptionMessage = ["subs": ["station:\(self.shortCode!)": ["recover": true]]]
         if let jsonData = try? JSONSerialization.data(withJSONObject: subscriptionMessage, options: []) {
@@ -104,17 +152,19 @@ public class ACWebSocketClient: ObservableObject {
             webSocketTask.send(.string(jsonString)) { error in
                 if let error = error {
                     print("Failed to send subscription message: \(error)")
-                } else {
-                    print("Subscription message sent: \(jsonString)")
+                    self.status.connection = ACConnectionState.failedSubscribe
+                    self.status.changed = true
                 }
             }
         } else {
             print("Failed to encode subscription message")
             status.connection = ACConnectionState.failedSubscribe
+            status.changed = true
         }
     }
     
-    /// Listens for incoming messages from the WebSocket server.
+    // Listens for incoming messages from the WebSocket server.
+    // All incoming messages should be text.
     private func listenForMessages() {
         webSocketTask?.receive { [weak self] result in
             guard let self = self else { return }
@@ -133,6 +183,7 @@ public class ACWebSocketClient: ObservableObject {
                 print("WebSocket error: \(error)")
                 DispatchQueue.main.async {
                     self.status.connection = ACConnectionState.disconnected
+                    self.status.changed = true
                 }
             }
             
@@ -141,14 +192,16 @@ public class ACWebSocketClient: ObservableObject {
         }
     }
     
-    /// Handles incoming messages and updates the `nowPlayingData`.
+    // Handles incoming messages and updates the status.
     private func handleMessage(_ message: String) {
         
+        // Decode into data for parseWebSocketData.
         guard let data = message.data(using: .utf8) else {
             print("Failed to decode message to data")
             return
         }
         
+        // Save last result.
         lastResult?.album = status.album
         lastResult?.artist = status.artist
         lastResult?.track = status.track
@@ -156,23 +209,26 @@ public class ACWebSocketClient: ObservableObject {
         lastResult?.dj = status.dj
         
         do {
-            print("parsing metadata")
+            // Attempt to parse the data. Parser will throw if it fails to work.
             let parser = ParseWebSocketData(data: data, defaultDJ: defaultDJ)
             parser.debug(to: debugLevel)
             
-            // I can hard-unwrap this because I had to have a value to connect at all.
+            // I can hard-unwrap this because I had to have a value to connect
+            // at all. The shortCode is needed because one key contains it.
             let result = try parser.parse(shortCode: shortCode!)
             DispatchQueue.main.async {
                 if result != self.lastResult {
+                    // Status changed from old values. (Note that the initial
+                    // connect message and one or more subsequent channel
+                    // messages may contain the same data; if they do, we'll
+                    // skip this.) Record the new status and call all the
+                    // callbacks.
                     self.status = result
                     self.notifySubscribers(with: self.status)
-                } else {
-                    print("no change, no set")
                 }
             }
         } catch {
             print("Failed to parse JSON: \(error)")
         }
-        
     }
 }
