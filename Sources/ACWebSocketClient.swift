@@ -40,6 +40,11 @@ public class ACWebSocketClient: ObservableObject {
     var debugLevel: Int = 0
     
     private var lastResult: ACStreamStatus?
+
+    /// init()
+    /// Constructs an empty `ACWebSoscketClient`, which must be initialized with
+    /// `configurationDidChange` and `setDefaultDJ`.
+    public init() {}
     
     ///  init(serverName: shortCode:)
     ///  Initializes an `ACWebSocketClient` instance with a preset server and station.
@@ -51,12 +56,18 @@ public class ACWebSocketClient: ObservableObject {
         if let defaultDJ {
             self.defaultDJ = defaultDJ
         }
-        if let serverName {
+        if let serverName, let shortCode {
             self.serverName = serverName
-        }
-        if let shortCode {
             self.shortCode = shortCode
+            constructWebSocketURL(serverName: serverName)
         }
+    }
+    
+    private func constructWebSocketURL(serverName: String) {
+        guard let webSocketURL = URL(string: "wss://\(String(describing: serverName))/api/live/nowplaying/websocket") else {
+            fatalError("Invalid server name for WebSocket URL")
+        }
+        self.webSocketURL = webSocketURL
     }
 
     
@@ -99,10 +110,7 @@ public class ACWebSocketClient: ObservableObject {
         self.serverName = serverName
         self.shortCode = shortCode
         self.disconnect()
-        guard let webSocketURL = URL(string: "wss://\(String(describing: serverName))/api/live/nowplaying/websocket") else {
-                fatalError("Invalid server name for WebSocket URL")
-        }
-        self.webSocketURL = webSocketURL
+        self.constructWebSocketURL(serverName: serverName)
         self.connect()
         self.lastResult = ACStreamStatus()
     }
