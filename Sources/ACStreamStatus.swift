@@ -6,6 +6,7 @@
 
 import Foundation
 
+/// Encapsulates the current metadata for the subscribed-to station.
 public class ACStreamStatus: Equatable {
     
     /// ==: allows you to use the == operator to compare two `ACStreamStatus` instances

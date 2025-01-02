@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var albumNameLabel: UILabel!
     @IBOutlet weak var albumArtURLText: UITextView!
     
-    private var client: ACWebSocketClient?
+    private var client = ACWebSocketClient.shared
     private var lastStatus: ACStreamStatus?
     
     override func viewDidLoad() {
@@ -35,12 +35,11 @@ class ViewController: UIViewController {
         let serverName = "demo.azuracast.com"
         serverNameLabel.text = serverName
         let shortCode  = "azuratest_radio"
-        
-        client = ACWebSocketClient(serverName: serverName, shortCode: shortCode)
-        client?.addSubscriber(callback: handleStreamStatus)
-        client?.debug(to: 0)    // See ACWebSocketClient for valid values
-        client?.setDefaultDJ(name: "No DJ")
-        client!.configurationDidChange(serverName: serverName, shortCode: shortCode)
+
+        client.configurationDidChange(serverName: serverName, shortCode: shortCode)
+        client.addSubscriber(callback: handleStreamStatus)
+        client.debug(to: 0)    // See ACWebSocketClient for valid values
+        client.setDefaultDJ(name: "No DJ")
         print("done")
     }
         

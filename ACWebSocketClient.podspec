@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ACWebSocketClient'
-  s.version          = '0.1.5'
+  s.version          = '0.1.8'
   s.summary          = 'ACWebSocketClient provides a real-time API for Azuracast stream metadata.'
 
   s.description      = <<-DESC

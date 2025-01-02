@@ -7,6 +7,7 @@
 import Foundation
 import Combine
 
+///  Actually parses the incoming JSON from the websocket and sets the status fields to correspond.
 public class ParseWebSocketData {
     var data: Data
     var defaultDJ: String?
