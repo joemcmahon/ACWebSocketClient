@@ -13,10 +13,16 @@ public typealias MetadataCallback<T> = (T) -> Void
 ///  The `ACWebSocketClient` class allows us to connect to an Azuracast websocket server
 ///  for realtime stream metadata updates via a  supplied callback.
 public class ACWebSocketClient: ObservableObject {
+    
+    /// Singleton instance; used  (particularly in SwiftUI) to ensure that everyone is using the same ciient.
+    public static let shared = ACWebSocketClient()
+    
     // Anyone subscribed to the metadata stream
     private var subscribers: [MetadataCallback<ACStreamStatus>] = []
     
-    var status = ACStreamStatus()
+    /// Current status for this client. If this is the singleton client, this status should be the same
+    /// for all references to the client.
+    public var status = ACStreamStatus()
         
     private var webSocketTask: URLSessionWebSocketTask?
     private var urlSession = URLSession(configuration: .default)
@@ -29,8 +35,9 @@ public class ACWebSocketClient: ObservableObject {
     /// `shortCode` is the station name shortcode defined by Azuracast and found on the stations's profile page
     var shortCode: String?
     
-    /// `defaultDJ`: the string to be retuned as the active DJ if no streamer is connected.
-    var defaultDJ: String?
+    /// `defaultDJ`: the string to be retuned as the active DJ if no streamer is connected. Publically accessible.
+    /// Set by `setDefaultDJ`.
+    public var defaultDJ: String?
     
     /// `debugLevel`: for development only; set to  the sum of the flag values you want while debugging
     /// - 0: no debug outout is printed
@@ -41,12 +48,10 @@ public class ACWebSocketClient: ObservableObject {
     
     private var lastResult: ACStreamStatus?
 
-    /// init()
     /// Constructs an empty `ACWebSoscketClient`, which must be initialized with
     /// `configurationDidChange` and `setDefaultDJ`.
     public init() {}
     
-    ///  init(serverName: shortCode:)
     ///  Initializes an `ACWebSocketClient` instance with a preset server and station.
     /// - Parameters:
     ///   - serverName: The server name of the server to connect to
@@ -71,7 +76,7 @@ public class ACWebSocketClient: ObservableObject {
     }
 
     
-    /// `addSubscriber(callback:)`
+    /// Adds a subscriber to the metadata returned asynchronously by the Azuracast now-plaiing API.
     /// - Parameter callback: Callback function to be called when a change to the station metadata
     /// is detected.
     ///
@@ -81,15 +86,19 @@ public class ACWebSocketClient: ObservableObject {
             subscribers.append(callback)
     }
     
-    /// `setDefaultDJ(name:)`
+    /// Sets the default value to be returned as the DJ name when no streamer is connected.
     /// - Parameter name: The string  to be returned as the DJ's name when no streamer is active.
     public func setDefaultDJ(name: String) {
         defaultDJ = name
     }
     
-    /// 'debug(to:)`
-    /// - Parameter to: Integer sum of the flags desired. Replaces any current setting. Use `0` to
-    /// turn off all debugging.
+    /// Sets the debug output level for the JSON parsing.
+    ///
+    /// Sum the values desired and use them as the `to:` argument
+    ///  - 0: No debug output
+    ///  - 1: Print the final derived values only.
+    ///  - 2: Print the subsections of the JSON that are used to extract the data.
+    ///  - 4: Print the raw incoming JSON in its entirety.
     public func debug(to: Int) {
         debugLevel = to
     }
@@ -102,8 +111,7 @@ public class ACWebSocketClient: ObservableObject {
     }
     
     
-    /// `configurationDidChange(serverName: shortCode:)`
-    ///  Use `configurationDidChange()` to (re)configure an existing `ACWebSocketClient`.
+    /// Call this method to update the configuration of the `ACWebSocketClient` and reconnect it.
     /// Diisconnects the client if  it's connected, changes the parameters, and reconnects with the new
     /// server and station, and clears the  last recorded stream status.
     public func configurationDidChange(serverName: String, shortCode: String) {
@@ -115,7 +123,6 @@ public class ACWebSocketClient: ObservableObject {
         self.lastResult = ACStreamStatus()
     }
     
-    /// `connect`
     /// Connects to the websocket API and sends the subscription message. Can be used to connect a
     /// currently-disconnected `ACWebSocketClient` or to reconnect an already-connected one.
     /// Marks the global status as `connected`.
@@ -131,7 +138,6 @@ public class ACWebSocketClient: ObservableObject {
         listenForMessages()
     }
     
-    /// `disconnect`
     /// Disconnects from the WebSocket API.  Sets the global status to `disconnected`.
     public func disconnect() {
         webSocketTask?.cancel(with: .normalClosure, reason: nil)
