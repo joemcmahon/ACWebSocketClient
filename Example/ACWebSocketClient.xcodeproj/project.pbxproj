@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25176A8282C46257CBD35E6E /* Pods_ACWebSocketClient_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8A61D27A13C5FD6C512E89 /* Pods_ACWebSocketClient_Example.framework */; };
+		34F4D8115D7377B9A2F44A9C /* Pods_ACWebSocketClient_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2860FEEAABEF9EBFADB620 /* Pods_ACWebSocketClient_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -18,7 +18,7 @@
 		71078F0B2D210AAF009D5775 /* connect.json in Resources */ = {isa = PBXBuildFile; fileRef = 71078F082D210AAF009D5775 /* connect.json */; };
 		71078F0C2D210AAF009D5775 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 71078F092D210AAF009D5775 /* empty.json */; };
 		71078F0D2D210AAF009D5775 /* channel_w_streamer.json in Resources */ = {isa = PBXBuildFile; fileRef = 71078F072D210AAF009D5775 /* channel_w_streamer.json */; };
-		A99116C91AE2E52D5B342A9B /* Pods_ACWebSocketClient_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEFE85FF481BD1B6F2A9D6F /* Pods_ACWebSocketClient_Tests.framework */; };
+		BB50CE31FB63CCC26AE765D7 /* Pods_ACWebSocketClient_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0389BC38C7A309FB49A84F /* Pods_ACWebSocketClient_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,12 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		127E2640AE41BBF7FD4A5D34 /* Pods-ACWebSocketClient_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACWebSocketClient_Example.debug.xcconfig"; path = "Target Support Files/Pods-ACWebSocketClient_Example/Pods-ACWebSocketClient_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2B91C24F7C386A3BE9C3DBAA /* ACWebSocketClient.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ACWebSocketClient.podspec; path = ../ACWebSocketClient.podspec; sourceTree = "<group>"; };
 		33451AB35579472D008FFC15 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4488B1E37DF4EA13CF00D237 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		55C1D117B5B21ED198F258EC /* Pods-ACWebSocketClient_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACWebSocketClient_Example.release.xcconfig"; path = "Target Support Files/Pods-ACWebSocketClient_Example/Pods-ACWebSocketClient_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5C8A61D27A13C5FD6C512E89 /* Pods_ACWebSocketClient_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACWebSocketClient_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* ACWebSocketClient_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACWebSocketClient_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,13 +45,16 @@
 		607FACE51AFB9204008FA782 /* ACWebSocketClient_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACWebSocketClient_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6E343BD2956D29CCB04E990C /* Pods-ACWebSocketClient_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACWebSocketClient_Tests.release.xcconfig"; path = "Target Support Files/Pods-ACWebSocketClient_Tests/Pods-ACWebSocketClient_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		65E2269B67A38DAAE6F08B8F /* Pods-ACWebSocketClient_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACWebSocketClient_Tests.release.xcconfig"; path = "Target Support Files/Pods-ACWebSocketClient_Tests/Pods-ACWebSocketClient_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		66F367DD45A7D2BA4B7DD0A9 /* Pods-ACWebSocketClient_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACWebSocketClient_Example.release.xcconfig"; path = "Target Support Files/Pods-ACWebSocketClient_Example/Pods-ACWebSocketClient_Example.release.xcconfig"; sourceTree = "<group>"; };
 		71078F062D210AAF009D5775 /* channel_no_streamer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = channel_no_streamer.json; sourceTree = "<group>"; };
 		71078F072D210AAF009D5775 /* channel_w_streamer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = channel_w_streamer.json; sourceTree = "<group>"; };
 		71078F082D210AAF009D5775 /* connect.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = connect.json; sourceTree = "<group>"; };
 		71078F092D210AAF009D5775 /* empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
-		C8A898E4BA00B55B6E185281 /* Pods-ACWebSocketClient_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACWebSocketClient_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ACWebSocketClient_Tests/Pods-ACWebSocketClient_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		DDEFE85FF481BD1B6F2A9D6F /* Pods_ACWebSocketClient_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACWebSocketClient_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D0389BC38C7A309FB49A84F /* Pods_ACWebSocketClient_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACWebSocketClient_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A0A8F3A8DB17D62E26A3B63 /* Pods-ACWebSocketClient_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACWebSocketClient_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ACWebSocketClient_Tests/Pods-ACWebSocketClient_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A4B63B023A1A1C5E3171A25 /* Pods-ACWebSocketClient_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACWebSocketClient_Example.debug.xcconfig"; path = "Target Support Files/Pods-ACWebSocketClient_Example/Pods-ACWebSocketClient_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		AF2860FEEAABEF9EBFADB620 /* Pods_ACWebSocketClient_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACWebSocketClient_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25176A8282C46257CBD35E6E /* Pods_ACWebSocketClient_Example.framework in Frameworks */,
+				34F4D8115D7377B9A2F44A9C /* Pods_ACWebSocketClient_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,29 +70,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A99116C91AE2E52D5B342A9B /* Pods_ACWebSocketClient_Tests.framework in Frameworks */,
+				BB50CE31FB63CCC26AE765D7 /* Pods_ACWebSocketClient_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2507361EC7D715EE8FF2A8F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5C8A61D27A13C5FD6C512E89 /* Pods_ACWebSocketClient_Example.framework */,
-				DDEFE85FF481BD1B6F2A9D6F /* Pods_ACWebSocketClient_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3426500BE4C6B4CA4046A0A7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				127E2640AE41BBF7FD4A5D34 /* Pods-ACWebSocketClient_Example.debug.xcconfig */,
-				55C1D117B5B21ED198F258EC /* Pods-ACWebSocketClient_Example.release.xcconfig */,
-				C8A898E4BA00B55B6E185281 /* Pods-ACWebSocketClient_Tests.debug.xcconfig */,
-				6E343BD2956D29CCB04E990C /* Pods-ACWebSocketClient_Tests.release.xcconfig */,
+				9A4B63B023A1A1C5E3171A25 /* Pods-ACWebSocketClient_Example.debug.xcconfig */,
+				66F367DD45A7D2BA4B7DD0A9 /* Pods-ACWebSocketClient_Example.release.xcconfig */,
+				8A0A8F3A8DB17D62E26A3B63 /* Pods-ACWebSocketClient_Tests.debug.xcconfig */,
+				65E2269B67A38DAAE6F08B8F /* Pods-ACWebSocketClient_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -106,7 +97,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				3426500BE4C6B4CA4046A0A7 /* Pods */,
-				2507361EC7D715EE8FF2A8F5 /* Frameworks */,
+				A6ACFCFD4B160A966D05EB00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +162,15 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		A6ACFCFD4B160A966D05EB00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF2860FEEAABEF9EBFADB620 /* Pods_ACWebSocketClient_Example.framework */,
+				7D0389BC38C7A309FB49A84F /* Pods_ACWebSocketClient_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,11 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ACWebSocketClient_Example" */;
 			buildPhases = (
-				66B92EB06208F0C3F717C675 /* [CP] Check Pods Manifest.lock */,
+				093C7C12BD20DA12C6D39504 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				8ACBB05203B3E4C2D35C13A6 /* [CP] Embed Pods Frameworks */,
+				895C89F423151666727E6BF1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,7 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ACWebSocketClient_Tests" */;
 			buildPhases = (
-				848BFCD13DB7E51928FBDFF3 /* [CP] Check Pods Manifest.lock */,
+				61DC3072CC37C7CC24B5F5C0 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -218,8 +218,9 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -280,7 +281,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		66B92EB06208F0C3F717C675 /* [CP] Check Pods Manifest.lock */ = {
+		093C7C12BD20DA12C6D39504 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,7 +303,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		848BFCD13DB7E51928FBDFF3 /* [CP] Check Pods Manifest.lock */ = {
+		61DC3072CC37C7CC24B5F5C0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,7 +325,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8ACBB05203B3E4C2D35C13A6 /* [CP] Embed Pods Frameworks */ = {
+		895C89F423151666727E6BF1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -396,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -404,14 +406,17 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -422,6 +427,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -437,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -449,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -457,14 +464,17 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -475,6 +485,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -483,23 +494,27 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 127E2640AE41BBF7FD4A5D34 /* Pods-ACWebSocketClient_Example.debug.xcconfig */;
+			baseConfigurationReference = 9A4B63B023A1A1C5E3171A25 /* Pods-ACWebSocketClient_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6PLL9M5SE2;
 				INFOPLIST_FILE = ACWebSocketClient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -511,13 +526,16 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55C1D117B5B21ED198F258EC /* Pods-ACWebSocketClient_Example.release.xcconfig */;
+			baseConfigurationReference = 66F367DD45A7D2BA4B7DD0A9 /* Pods-ACWebSocketClient_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6PLL9M5SE2;
 				INFOPLIST_FILE = ACWebSocketClient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -529,7 +547,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8A898E4BA00B55B6E185281 /* Pods-ACWebSocketClient_Tests.debug.xcconfig */;
+			baseConfigurationReference = 8A0A8F3A8DB17D62E26A3B63 /* Pods-ACWebSocketClient_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6PLL9M5SE2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -542,7 +560,11 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -553,7 +575,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E343BD2956D29CCB04E990C /* Pods-ACWebSocketClient_Tests.release.xcconfig */;
+			baseConfigurationReference = 65E2269B67A38DAAE6F08B8F /* Pods-ACWebSocketClient_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6PLL9M5SE2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -562,7 +584,11 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;

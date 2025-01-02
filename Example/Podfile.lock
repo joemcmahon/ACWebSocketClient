@@ -1,5 +1,5 @@
 PODS:
-  - ACWebSocketClient (0.1.4)
+  - ACWebSocketClient (0.1.8)
 
 DEPENDENCIES:
   - ACWebSocketClient (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ACWebSocketClient: db1f37ddef7818a2afe11765e7c6736f62a95325
+  ACWebSocketClient: e70722d7c30bc173086cc0b5a8a99b5f11858654
 
 PODFILE CHECKSUM: ab81701533cdf94d05c7a9725b37e4015b7bcf6f
 
