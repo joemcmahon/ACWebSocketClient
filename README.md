@@ -3,9 +3,11 @@
 [![CI Status](https://img.shields.io/travis/joemcmahon/ACWebSocketClient.svg?style=flat)](https://travis-ci.org/joemcmahon/ACWebSocketClient)
 [![Version](https://img.shields.io/cocoapods/v/ACWebSocketClient.svg?style=flat)](https://cocoapods.org/pods/ACWebSocketClient)
 [![License](https://img.shields.io/cocoapods/l/ACWebSocketClient.svg?style=flat)](https://cocoapods.org/pods/ACWebSocketClient)
-[![Platform](https://img.shields.io/cocoapods/p/ACWebSocketClient.svg?style=flat)](https://cocoapods.org/pods/ACWebSocketClient)
+[![Platform](https://img.shields.io/cocoapods/p/ACWebSocketClient.sg?style=flat)](https://cocoapods.org/pods/ACWebSocketClient)
 
 An Azuracast websocket SSE metadata client written in Swift
+
+## NOTE: this client is based on `URLSessionWebSocketTask`. As such, its error recovery is poor, and this class isn't suitable for production use.
 
 If you've set up an Azuracast streaming radio station and attempted to use
 the Apple-recommended way of fetching the stream metadata, you will discover
